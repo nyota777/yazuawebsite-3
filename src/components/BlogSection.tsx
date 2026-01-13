@@ -9,13 +9,14 @@ export function BlogSection() {
 
   const blogPosts = [
     {
-      title: '10 Essential Leadership Skills Every Young Man Should Develop',
-      excerpt: 'Discover the key leadership competencies that will set young men up for success in their personal and professional lives.',
-      image: 'https://images.unsplash.com/photo-1623863568368-69e4cbe6cc0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMG1lbiUyMGxlYWRlcnNoaXAlMjB0cmFpbmluZ3xlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      title: 'THE FIRE',
+      excerpt: 'We often speak of missing boys when they\'ve run away, dropped out, or disappeared from school or society altogether. But some boys begin to disappear long before they leave. They vanish in plain sight, silent in the classroom, withdrawn at the dinner table, performing masculinity like a soldier reciting commands he does not believe in. Their minds are loud, but their voices have gone quiet. Their hearts ache, but their faces remain blank. Their names are on the roll call, but they are not seen.',
+      image: `${import.meta.env.BASE_URL}leadership.png`,
       category: 'Leadership',
       author: 'David Kimani',
       date: 'Jan 5, 2026',
       readTime: '5 min read',
+      link: 'https://open.substack.com/pub/ericmungai/p/raising-men-who-wont-crumble-775?r=5jvuu9&utm_campaign=post&utm_medium=web',
     },
     {
       title: 'The Power of Outdoor Adventure in Character Development',
@@ -144,9 +145,20 @@ export function BlogSection() {
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{post.readTime}</span>
-                  <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
-                    Read More <ArrowRight className="w-5 h-5" />
-                  </button>
+                  {post.link ? (
+                    <a 
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300"
+                    >
+                      Read More <ArrowRight className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
+                      Read More <ArrowRight className="w-5 h-5" />
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.article>
@@ -155,9 +167,14 @@ export function BlogSection() {
 
         {/* Load More Button */}
         <div className="text-center mt-12">
-          <button className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105">
-            Load More Articles
-          </button>
+          <a 
+            href="https://substack.com/@ericmungai?utm_source=share&utm_medium=android&r=2uo5zv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Read More Articles
+          </a>
         </div>
       </div>
     </section>
