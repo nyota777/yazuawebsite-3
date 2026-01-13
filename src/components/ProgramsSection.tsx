@@ -6,7 +6,7 @@ export function ProgramsSection() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProgram, setSelectedProgram] = useState<null | typeof programs[0]>(null);
 
-  const filters = ['All', 'Leadership', 'LEADERSHIP', 'Rites of Passage', 'Outdoor Adventure', 'Project-Based Learning'];
+  const filters = ['All', 'Leadership', 'LEADERSHIP', 'Rites of Passage', 'Outdoor Adventure', 'Experiential Learning'];
 
   const programs = [
     {
@@ -14,7 +14,7 @@ export function ProgramsSection() {
       category: 'Rites of Passage',
       description: 'A flagship 6-month program using physically challenging activities like obstacle courses and rock climbing to build grit, leadership, and identity through Rites of Passage.',
       icon: Target,
-      image: 'https://images.unsplash.com/photo-1640951332580-1072ff909952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwYWR2ZW50dXJlJTIwY2FtcHxlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}forge-image.jpg`,
       duration: '6 months',
       ageGroup: '12-14 years',
       detailedInfo: {
@@ -36,7 +36,7 @@ export function ProgramsSection() {
       category: 'LEADERSHIP',
       description: 'A 3-month semi-incubation program for older youth focused on innovation, entrepreneurial leadership, and turning ideas into tangible projects and social enterprises.',
       icon: Lightbulb,
-      image: 'https://images.unsplash.com/photo-1732539539294-4cc2f38fac9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXJzaGlwJTIwd29ya3Nob3B8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}build-image.jpg`,
       duration: '3 months',
       ageGroup: '18-24 years',
       detailedInfo: {
@@ -54,13 +54,13 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'iDecide (Ages 13-15)',
+      name: 'iDecide (Ages 13-15) Boys Mentorship Model',
       category: 'Project-Based Learning',
       description: 'A 6-month intensive life coaching model combining online and outdoor activities, emphasizing decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
-      image: 'https://images.unsplash.com/photo-1639432038099-4379f2d421cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW50b3JzaGlwJTIweY91dGh8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}iDecide-image.jpg`,
       duration: '6 months',
-      ageGroup: '13-15 years',
+      ageGroup: '13-17 years',
       detailedInfo: {
         focus: 'A 6-month intensive life coaching model consisting of eight interactive sessions.',
         methodology: 'This program combines online and outdoor activities, using tools like the iDecide Journal and the 20/20 Vision year planner to track progress.',
@@ -76,13 +76,13 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'ManUp Leadership Adventures',
+      name: 'ManUp Leadership Adventures (Ages 9-13)', 
       category: 'Outdoor Adventure',
       description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
       icon: Mountain,
-      image: 'https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbGVhZGVyc2hpcCUyMGFjdGl2aXR5fGVufDF8fHx8MTc2Nzk2MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}ManUp-image.jpg`,
       duration: '3-5 days',
-      ageGroup: 'All ages',
+      ageGroup: '9-13 years',
       detailedInfo: {
         focus: 'Short, high-impact excursions lasting 3–5 days.',
         methodology: 'Participants engage in hiking, camping, and outdoor obstacle courses.',
@@ -102,7 +102,7 @@ export function ProgramsSection() {
       category: 'Leadership',
       description: 'Ongoing mentorship program connecting young men with experienced leaders for one-on-one guidance, support, and personal development.',
       icon: Users,
-      image: 'https://images.unsplash.com/photo-1623863568368-69e4cbe6cc0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMG1lbiUyMGxlYWRlcnNoaXAlMjB0cmFpbmluZ3xlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}mentorship-circle.jpg`,
       duration: 'Ongoing',
       ageGroup: 'All ages',
       detailedInfo: {
@@ -120,11 +120,11 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'Innovation Lab',
+      name: 'X Global Summer Experiences',
       category: 'Project-Based Learning',
       description: 'Hands-on design thinking workshops where young men develop innovative solutions to real-world problems through collaborative projects.',
       icon: Lightbulb,
-      image: 'https://images.unsplash.com/photo-1758270705317-3ef6142d306f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwY29sbGFib3JhdGlvbiUyMHlvdXRofGVufDF8fHx8MTc2Nzk2MTQyN3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}X Global Summer Experiences-image.jpg`,
       duration: '4 months',
       ageGroup: 'All ages',
       detailedInfo: {
@@ -181,7 +181,7 @@ export function ProgramsSection() {
               className="w-full"
               poster="https://images.unsplash.com/photo-1640951332580-1072ff909952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwYWR2ZW50dXJlJTIwY2FtcHxlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
             >
-              <source src="/yazua-programs-overview.mp4" type="video/mp4" />
+              <source src={`${import.meta.env.BASE_URL}yazua-programs-overview.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
