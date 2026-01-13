@@ -168,7 +168,7 @@ export function GallerySection() {
             >
               <video 
                 ref={videoRef}
-                src={`${import.meta.env.BASE_URL}Camp Highlights 2025.mp4`}
+                src={`${import.meta.env.BASE_URL}${encodeURIComponent('Camp Highlights 2025.mp4')}`}
                 className="w-full h-full object-cover"
                 muted
                 loop
