@@ -19,7 +19,7 @@ export function Navigation() {
     { name: 'Programs', href: '#programs' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Blog', href: '#blog' },
-    { name: 'iDecide', href: '#idecide' },
+    { name: 'iDECIDE', href: '#idecide' },
     { name: 'Contact', href: '#contact' },
   ];
 

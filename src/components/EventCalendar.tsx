@@ -29,7 +29,7 @@ export function EventCalendar() {
       color: 'bg-[#1A1A1A]',
     },
     {
-      title: 'iDecide Life Coaching Session',
+      title: 'iDECIDE Life Coaching Session',
       date: 'April 10, 2026',
       time: '10:00 AM - 1:00 PM',
       location: 'Online & In-Person',

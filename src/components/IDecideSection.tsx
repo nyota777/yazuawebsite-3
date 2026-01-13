@@ -90,7 +90,7 @@ export function IDecideSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="text-orange-600">iDecide</span> - Find Your Path
+            <span className="text-orange-600">iDECIDE</span> - Find Your Path
           </h2>
           <p className="text-xl text-gray-600">
             Answer a few questions to discover which YAZUA AFRIKA program is right for you.

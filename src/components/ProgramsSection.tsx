@@ -54,7 +54,7 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'iDecide (Ages 13-15) Boys Mentorship Model',
+      name: 'iDECIDE (Ages 13-15) Boys Mentorship Model',
       category: 'Project-Based Learning',
       description: 'A 6-month intensive life coaching model combining online and outdoor activities, emphasizing decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
@@ -63,11 +63,11 @@ export function ProgramsSection() {
       ageGroup: '13-17 years',
       detailedInfo: {
         focus: 'A 6-month intensive life coaching model consisting of eight interactive sessions.',
-        methodology: 'This program combines online and outdoor activities, using tools like the iDecide Journal and the 20/20 Vision year planner to track progress.',
+        methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress.',
         purpose: 'It empowers young men to define their life mission, set goals, and develop the capacity to make decisions that positively impact their community.',
         keyFeatures: [
           'Eight interactive coaching sessions',
-          'iDecide Journal for self-reflection',
+          'iDECIDE Journal for self-reflection',
           '20/20 Vision year planner',
           'Online and outdoor activities',
           'Life mission definition',

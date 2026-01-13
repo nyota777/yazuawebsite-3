@@ -119,7 +119,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
-                  iDecide (Ages 13-15)
+                  iDECIDE (Ages 13-15)
                 </a>
               </li>
               <li>

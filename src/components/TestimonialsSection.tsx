@@ -30,10 +30,10 @@ export function TestimonialsSection() {
     },
     {
       name: 'Samuel Ochieng',
-      role: 'iDecide Graduate, 2025',
+      role: 'iDECIDE Graduate, 2025',
       image: 'https://images.unsplash.com/photo-1732539539294-4cc2f38fac9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXJzaGlwJTIwd29ya3Nob3B8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       quote:
-        'The iDecide program helped me make better decisions and understand my purpose. The coaches truly care about our success and personal growth.',
+        'The iDECIDE program helped me make better decisions and understand my purpose. The coaches truly care about our success and personal growth.',
       rating: 5,
     },
     {
