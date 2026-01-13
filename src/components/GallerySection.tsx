@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const galleryItems = [
     {
@@ -150,18 +152,38 @@ export function GallerySection() {
                 <p className="text-white font-semibold">Student Success Stories</p>
               </div>
             </div>
-            <div className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg cursor-pointer group">
+            <div 
+              className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+              onClick={() => {
+                if (videoRef.current) {
+                  if (isVideoPlaying) {
+                    videoRef.current.pause();
+                    setIsVideoPlaying(false);
+                  } else {
+                    videoRef.current.play();
+                    setIsVideoPlaying(true);
+                  }
+                }
+              }}
+            >
               <video 
+                ref={videoRef}
                 src={`${import.meta.env.BASE_URL}Camp Highlights 2025.mp4`}
                 className="w-full h-full object-cover"
                 muted
                 loop
+                autoPlay
+                playsInline
+                onPlay={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-10 h-10 text-white ml-1" />
+              {!isVideoPlaying && (
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-10 h-10 text-white ml-1" />
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="text-white font-semibold">Camp Highlights 2025</p>
               </div>
