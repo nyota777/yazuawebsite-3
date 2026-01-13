@@ -58,6 +58,13 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          <div className="flex justify-center mb-6">
+            <img 
+              src={`${import.meta.env.BASE_URL}logo.png`} 
+              alt="YAZUA AFRIKA Logo" 
+              className="h-16 w-auto"
+            />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About <span className="text-[#FF6F3C]">YAZUA AFRIKA</span>
           </h2>

@@ -9,8 +9,11 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-[#FF6F3C]">YAZUA</span>
-              <span className="text-2xl font-bold text-white ml-1">AFRIKA</span>
+              <img 
+                src={`${import.meta.env.BASE_URL}logo.png`} 
+                alt="YAZUA AFRIKA Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-sm mb-4">
               Empowering young men through leadership, mentorship, and experiential learning
