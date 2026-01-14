@@ -56,6 +56,12 @@ export function GallerySection() {
       title: 'Youth Development',
       category: 'Development',
     },
+    {
+      type: 'image',
+      src: `${import.meta.env.BASE_URL}gallery9.jpeg`,
+      title: 'Program Activities',
+      category: 'Activities',
+    },
   ];
 
   const handlePrevious = () => {
