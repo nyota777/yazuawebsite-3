@@ -14,7 +14,7 @@ export function ProgramsSection() {
       category: 'Rites of Passage',
       description: 'A flagship 6-month program using physically challenging activities like obstacle courses and rock climbing to build grit, leadership, and identity through Rites of Passage.',
       icon: Target,
-      image: `${import.meta.env.BASE_URL}forge-image.jpg`,
+      image: `${import.meta.env.BASE_URL}forge_logo.png`,
       duration: '6 months',
       ageGroup: '12-14 years',
       detailedInfo: {
@@ -58,7 +58,7 @@ export function ProgramsSection() {
       category: 'Project-Based Learning',
       description: 'A 6-month intensive life coaching model combining online and outdoor activities, emphasizing decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
-      image: `${import.meta.env.BASE_URL}iDecide-image.jpg`,
+      image: `${import.meta.env.BASE_URL}iDECIDE-logo.jpeg`,
       duration: '6 months',
       ageGroup: '13-17 years',
       detailedInfo: {
@@ -80,7 +80,7 @@ export function ProgramsSection() {
       category: 'Outdoor Adventure',
       description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
       icon: Mountain,
-      image: `${import.meta.env.BASE_URL}ManUp-image.jpg`,
+      image: `${import.meta.env.BASE_URL}Man_Up_Adventures.jpeg`,
       duration: '3-5 days',
       ageGroup: '9-13 years',
       detailedInfo: {
@@ -124,7 +124,7 @@ export function ProgramsSection() {
       category: 'Project-Based Learning',
       description: 'Hands-on design thinking workshops where young men develop innovative solutions to real-world problems through collaborative projects.',
       icon: Lightbulb,
-      image: `${import.meta.env.BASE_URL}X Global Summer Experiences-image.jpg`,
+      image: `${import.meta.env.BASE_URL}XGlobal_Summer_Camps.jpeg`,
       duration: '4 months',
       ageGroup: 'All ages',
       detailedInfo: {
