@@ -180,8 +180,17 @@ export function GallerySection() {
                 loop
                 autoPlay
                 playsInline
+                controls={isVideoPlaying}
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
+                onLoadedData={() => {
+                  if (videoRef.current) {
+                    videoRef.current.play().catch(() => {
+                      // Autoplay was prevented, user will need to click
+                      setIsVideoPlaying(false);
+                    });
+                  }
+                }}
               />
               {!isVideoPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
