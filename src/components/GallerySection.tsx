@@ -142,22 +142,7 @@ export function GallerySection() {
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Testimonials & Highlights
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg cursor-pointer group">
-              <img
-                src="https://images.unsplash.com/photo-1623863568368-69e4cbe6cc0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMG1lbiUyMGxlYWRlcnNoaXAlMjB0cmFpbmluZ3xlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Video Testimonial"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-10 h-10 text-white ml-1" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold">Student Success Stories</p>
-              </div>
-            </div>
+          <div className="flex justify-center">
             <div 
               className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
               onClick={() => {
