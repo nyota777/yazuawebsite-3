@@ -117,7 +117,7 @@ export function AboutSection() {
             className="relative h-80 rounded-2xl overflow-hidden shadow-xl group"
           >
             <img
-              src="https://images.unsplash.com/photo-1640951332580-1072ff909952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwYWR2ZW50dXJlJTIwY2FtcHxlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={`${import.meta.env.BASE_URL}camp_image.jpeg`}
               alt="Outdoor Camps"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -137,7 +137,7 @@ export function AboutSection() {
             className="relative h-80 rounded-2xl overflow-hidden shadow-xl group"
           >
             <img
-              src="https://images.unsplash.com/photo-1732539539294-4cc2f38fac9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXJzaGlwJTIwd29ya3Nob3B8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={`${import.meta.env.BASE_URL}XSummerExperiences.jpeg`}
               alt="X-Global Summer Experiences"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
