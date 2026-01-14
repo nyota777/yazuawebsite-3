@@ -29,13 +29,14 @@ export function BlogSection() {
       link: 'https://substack.com/home/post/p-174597395',
     },
     {
-      title: 'From Mentee to Mentor: A Journey of Transformation',
-      excerpt: 'Read inspiring stories of young men who have gone through our programs and are now mentoring the next generation.',
-      image: 'https://images.unsplash.com/photo-1639432038099-4379f2d421cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW50b3JzaGlwJTIweW91dGh8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      title: 'Digital Loneliness: The Silent Erosion of Boyhood',
+      excerpt: 'FORGED FRIDAYS | 24th Oct, 2025 - 🔥 THE FIRE - Here\'s a question worth sitting with: What if the loneliness epidemic among boys isn\'t a failure of connection, but a crisis of recognition? We\'ve built a world where a boy can accumulate thousands of followers yet remain fundamentally unknown, speak constantly yet never be truly heard. The architecture of digital life promised us community, but delivered performance. And boys, more than anyone, are paying the price. We\'ve replaced the friction of embodied presence, the messy, inefficient, gloriously human work of friendship with the frictionless ease of algorithmic relation. The neuroscience is clear: boys\' brains are wired for close, emotionally intimate friendships. Yet we\'ve constructed a social ecosystem that makes such intimacy nearly impossible to access. What we call "digital natives" might more accurately be described as "intimacy refugees." This matters because boyhood isn\'t just a stage to survive, it\'s the crucible where human beings learn to be known and to know others. Strip that away, and you\'re not just isolating boys. You\'re severing the developmental pathway to mature masculinity itself. 🔨 THE HAMMER - The same forces that exploit boys\' isolation, the manosphere, the gambling platforms, the pornography industrial complex didn\'t create this vulnerability. They recognized it. They\'re simply capitalizing on a developmental void we created when we decided that screens could substitute for sustained human presence. The pattern is predictable now. A boy withdraws into digital spaces seeking connection, he finds performance instead as the gap between his curated self and his actual self widens. Shame fills the space, and when left unwitnessed, calcifies into either rage or despair.',
+      image: `${import.meta.env.BASE_URL}digital-lonliness.png`,
       category: 'Success Stories',
       author: 'James Mwangi',
       date: 'Dec 20, 2025',
       readTime: '6 min read',
+      link: 'https://substack.com/home/post/p-176996413',
     },
     {
       title: 'Entrepreneurship Education: Building Future Business Leaders',
