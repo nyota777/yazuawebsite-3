@@ -19,13 +19,14 @@ export function BlogSection() {
       link: 'https://open.substack.com/pub/ericmungai/p/raising-men-who-wont-crumble-775?r=5jvuu9&utm_campaign=post&utm_medium=web',
     },
     {
-      title: 'The Power of Outdoor Adventure in Character Development',
-      excerpt: 'How wilderness experiences and outdoor challenges build resilience, confidence, and teamwork in young men.',
-      image: 'https://images.unsplash.com/photo-1640951332580-1072ff909952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwYWR2ZW50dXJlJTIwY2FtcHxlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      title: 'Boys Responsibility',
+      excerpt: '🔥 THE FIRE - There comes a point in every boy\'s life when the question of weight emerges, not the weight of muscle or body, but the weight of RESPONSIBILITY. Responsibility is not something boys are born with. It is not instinctive, nor does it fall neatly into place with age. It is FORGED. And like iron under heat, it requires pressure, friction, and repetition. We cannot expect boys to carry the burdens of manhood tomorrow, if we do not invite them to shoulder responsibilities, however small, today.',
+      image: `${import.meta.env.BASE_URL}boys-responsibility.png`,
       category: 'Youth Development',
       author: 'Peter Wanjiru',
       date: 'Dec 28, 2025',
       readTime: '7 min read',
+      link: 'https://substack.com/home/post/p-174597395',
     },
     {
       title: 'From Mentee to Mentor: A Journey of Transformation',
