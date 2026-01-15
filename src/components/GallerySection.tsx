@@ -163,9 +163,9 @@ export function GallerySection() {
                 className="w-full h-full object-cover"
                 muted
                 loop
-                autoPlay
                 playsInline
-                controls={isVideoPlaying}
+                preload="metadata"
+                controls
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
                 onLoadedData={() => {
@@ -176,10 +176,14 @@ export function GallerySection() {
                     });
                   }
                 }}
+                onError={(e) => {
+                  console.error('Video error:', e);
+                  setIsVideoPlaying(false);
+                }}
               />
               {!isVideoPlaying && (
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 pointer-events-auto">
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
