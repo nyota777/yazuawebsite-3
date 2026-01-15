@@ -41,7 +41,7 @@ export function BlogSection() {
     {
       title: 'Entrepreneurship Education: Building Future Business Leaders',
       excerpt: 'Learn how our entrepreneurship programs equip young men with practical business skills and innovative thinking.',
-      image: 'https://images.unsplash.com/photo-1732539539294-4cc2f38fac9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXJzaGlwJTIwd29ya3Nob3B8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}gallery10.jpg`,
       category: 'Program Updates',
       author: 'Sarah Njeri',
       date: 'Dec 15, 2025',
@@ -50,7 +50,7 @@ export function BlogSection() {
     {
       title: 'The Importance of Positive Masculinity in Youth Development',
       excerpt: 'Exploring healthy masculinity and how we help young men develop positive identities and relationships.',
-      image: 'https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbGVhZGVyc2hpcCUyMGFjdGl2aXR5fGVufDF8fHx8MTc2Nzk2MTQyNnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}gallery11.jpg`,
       category: 'Youth Development',
       author: 'Michael Ochieng',
       date: 'Dec 10, 2025',
@@ -59,7 +59,7 @@ export function BlogSection() {
     {
       title: 'New Program Launch: Innovation Lab 2026',
       excerpt: 'Announcing our newest program focused on design thinking, technology, and social innovation for young changemakers.',
-      image: 'https://images.unsplash.com/photo-1758270705317-3ef6142d306f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwY29sbGFib3JhdGlvbiUyMHlvdXRofGVufDF8fHx8MTc2Nzk2MTQyN3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: `${import.meta.env.BASE_URL}gallery12.jpg`,
       category: 'Program Updates',
       author: 'Grace Akinyi',
       date: 'Dec 5, 2025',

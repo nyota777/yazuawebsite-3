@@ -159,13 +159,13 @@ export function GallerySection() {
             >
               <video 
                 ref={videoRef}
-                src={`${import.meta.env.BASE_URL}Camp-Highlights-2025.mp4`}
                 className="w-full h-full object-cover"
                 muted
                 loop
                 playsInline
                 preload="metadata"
                 controls
+                crossOrigin="anonymous"
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
                 onLoadedData={() => {
@@ -180,7 +180,10 @@ export function GallerySection() {
                   console.error('Video error:', e);
                   setIsVideoPlaying(false);
                 }}
-              />
+              >
+                <source src={`${import.meta.env.BASE_URL}Camp-Highlights-2025.mp4`} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               {!isVideoPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
                   <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 pointer-events-auto">
