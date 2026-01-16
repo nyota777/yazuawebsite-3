@@ -54,7 +54,7 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'iDECIDE (Ages 13-15) Boys Mentorship Model',
+      name: 'IDECIDE (AGES 13-15) BOYS MENTORSHIP MODEL',
       category: 'Project-Based Learning',
       description: 'A 6-month intensive life coaching model combining online and outdoor activities, emphasizing decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
@@ -76,7 +76,7 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'ManUp Leadership Adventures (Ages 9-13)', 
+      name: 'MAN UP LEADERSHIP ADVENTURES (AGES 9-13)', 
       category: 'Outdoor Adventure',
       description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
       icon: Mountain,
@@ -98,7 +98,7 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'Mentorship Circle',
+      name: 'MENTORSHIP CIRCLE',
       category: 'Leadership',
       description: 'Ongoing mentorship program connecting young men with experienced leaders for one-on-one guidance, support, and personal development.',
       icon: Users,
@@ -120,7 +120,7 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'X Global Summer Experiences',
+      name: 'X GLOBAL SUMMER EXPERIENCES',
       category: 'Project-Based Learning',
       description: 'Hands-on design thinking workshops where young men develop innovative solutions to real-world problems through collaborative projects.',
       icon: Lightbulb,
