@@ -10,9 +10,10 @@ export function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src={`${import.meta.env.BASE_URL}logo.png`} 
+                src={`${import.meta.env.BASE_URL}yazua_logo.png`} 
                 alt="YAZUA AFRIKA Logo" 
-                className="h-10 w-auto"
+                className="h-14 w-auto bg-transparent"
+                style={{ backgroundColor: 'transparent' }}
               />
             </div>
             <p className="text-sm mb-4">

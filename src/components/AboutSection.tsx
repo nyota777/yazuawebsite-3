@@ -60,9 +60,10 @@ export function AboutSection() {
         >
           <div className="flex justify-center mb-6">
             <img 
-              src={`${import.meta.env.BASE_URL}logo.png`} 
+              src={`${import.meta.env.BASE_URL}yazua_logo.png`} 
               alt="YAZUA AFRIKA Logo" 
-              className="h-16 w-auto"
+              className="h-24 w-auto bg-transparent"
+              style={{ backgroundColor: 'transparent' }}
             />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
