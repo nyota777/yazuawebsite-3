@@ -22,7 +22,7 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1623863568368-69e4cbe6cc0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMG1lbiUyMGxlYWRlcnNoaXAlMjB0cmFpbmluZ3xlbnwxfHx8fDE3Njc5NjE0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={`${import.meta.env.BASE_URL}gallery13.jpg`}
           alt="Leadership Training"
           className="w-full h-full object-cover"
         />
