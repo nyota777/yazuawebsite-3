@@ -48,24 +48,6 @@ export function BlogSection() {
       readTime: '8 min read',
       link: 'https://substack.com/@arthurnyota/p-163620892',
     },
-    {
-      title: 'The Importance of Positive Masculinity in Youth Development',
-      excerpt: 'Exploring healthy masculinity and how we help young men develop positive identities and relationships.',
-      image: `${import.meta.env.BASE_URL}gallery11.jpg`,
-      category: 'Youth Development',
-      author: 'Michael Ochieng',
-      date: 'Dec 10, 2025',
-      readTime: '6 min read',
-    },
-    {
-      title: 'New Program Launch: Innovation Lab 2026',
-      excerpt: 'Announcing our newest program focused on design thinking, technology, and social innovation for young changemakers.',
-      image: `${import.meta.env.BASE_URL}gallery12.jpg`,
-      category: 'Program Updates',
-      author: 'Grace Akinyi',
-      date: 'Dec 5, 2025',
-      readTime: '4 min read',
-    },
   ];
 
   const filteredPosts =
