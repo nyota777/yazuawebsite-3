@@ -42,8 +42,8 @@ export function AboutSection() {
     },
     { 
       year: '2022', 
-      title: 'Strategic Partnerships & 2,000 Milestone', 
-      description: 'Secured partnerships with Dawamu Boys Academy, Starehe Boys and Merishaw Boys as their boys\' mentorship and coaching provider. Hit the 2,000 mark for boys mentored and gone through our programs.' 
+      title: 'Continental Expansion & National Strategy Development', 
+      description: 'Secured strategic partnerships with 5 boys high schools across Kenya, establishing our mentorship programs as a cornerstone of youth development. Expanded our reach with implementation and presence in 5 African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo. Developed the National Male Engagement Strategy for Kenya, positioning YAZUA AFRIKA as a key player in shaping the future of boys\' mentorship at a national level.' 
     },
   ];
 
