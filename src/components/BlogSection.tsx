@@ -48,6 +48,16 @@ export function BlogSection() {
       readTime: '8 min read',
       link: 'https://substack.com/@arthurnyota/p-163620892',
     },
+    {
+      title: 'HAPPY FATHERS DAY',
+      excerpt: 'Anyone can be a father, but it takes a real man to be a dad. Most children look at their dad like some type of hero; I\'m one of those kids. Fathers are defined as the anchors and the builders who provide stability, strength and a sense of security among us. It takes a lot of sacrifice, a lot of tears to be a real dad and we appreciate all the real dads today.',
+      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      category: 'Leadership',
+      author: 'Arthur Nyota',
+      date: 'Jun 16, 2025',
+      readTime: '4 min read',
+      link: 'https://substack.com/@arthurnyota/p-165986139',
+    },
   ];
 
   const filteredPosts =
