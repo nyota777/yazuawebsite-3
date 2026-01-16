@@ -39,13 +39,14 @@ export function BlogSection() {
       link: 'https://substack.com/home/post/p-176996413',
     },
     {
-      title: 'Entrepreneurship Education: Building Future Business Leaders',
-      excerpt: 'Learn how our entrepreneurship programs equip young men with practical business skills and innovative thinking.',
-      image: `${import.meta.env.BASE_URL}gallery10.jpg`,
+      title: 'So what is a man?',
+      excerpt: 'From the moment a boy sets foot into the world, he does not know yet the gentleness to be taken from him slowly in small ordinary acts. The first time he cries, people laugh. Eventually, emotions become a foreign concept as they are left at the door like muddy shoes. Emotions like love come like a fire and hits hard. Immediately, these prohibitions are extinguished by notes on patriarchy to shed the emotional load off their shoulders. Anger is safe for young boys in our society. It\'s easy it\'s safe. When you\'re lonely or scared or sad, you\'re weak. But if you can just funnel it into rage, anger, you\'ll be strong. You\'ll be a "man". In a matter of time, he will learn that the world does not hold space for softness and kindness. For many boys and young men, the nearest semblance of affection often comes in the form of a bundle of critiques and corrections. He is told to weaponize our voice and have a thirst and appetite for control and an appetite for dominance. God forbid he pauses long enough to admit he is scared and hurt.',
+      image: `${import.meta.env.BASE_URL}boy_child.png`,
       category: 'Program Updates',
-      author: 'Sarah Njeri',
+      author: 'Arthur Nyota',
       date: 'Dec 15, 2025',
       readTime: '8 min read',
+      link: 'https://substack.com/@arthurnyota/p-163620892',
     },
     {
       title: 'The Importance of Positive Masculinity in Youth Development',
