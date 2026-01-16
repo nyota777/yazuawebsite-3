@@ -124,12 +124,17 @@ export function Footer() {
               </li>
               <li>
                 <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
-                  ManUp Leadership Adventures
+                  MAN UP LEADERSHIP ADVENTURES
                 </a>
               </li>
               <li>
                 <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
-                  Mentorship Circle
+                  MENTORSHIP CIRCLE
+                </a>
+              </li>
+              <li>
+                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                  X GLOBAL SUMMER EXPERIENCES
                 </a>
               </li>
             </ul>
