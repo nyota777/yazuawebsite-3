@@ -253,6 +253,15 @@ export function ProgramsSection() {
                     >
                       Register Now <ArrowRight className="w-5 h-5" />
                     </a>
+                    <a
+                      href="https://book.heygoldie.com/Yazua-Afrika"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 bg-gray-100 text-gray-900 px-6 py-3 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 font-semibold"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Book Now <ArrowRight className="w-5 h-5" />
+                    </a>
                     <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
                       Learn More <ArrowRight className="w-5 h-5" />
                     </button>
@@ -378,15 +387,26 @@ export function ProgramsSection() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
                   {selectedProgram.name === 'X GLOBAL SUMMER EXPERIENCES' ? (
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
-                    >
-                      Register Now
-                      <ArrowRight className="w-5 h-5" />
-                    </a>
+                    <>
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
+                      >
+                        Register Now
+                        <ArrowRight className="w-5 h-5" />
+                      </a>
+                      <a
+                        href="https://book.heygoldie.com/Yazua-Afrika"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-gray-100 text-gray-900 px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
+                      >
+                        Book Now
+                        <ArrowRight className="w-5 h-5" />
+                      </a>
+                    </>
                   ) : (
                     <a
                       href="https://book.heygoldie.com/Yazua-Afrika"
