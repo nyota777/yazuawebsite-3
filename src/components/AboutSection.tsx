@@ -88,69 +88,6 @@ export function AboutSection() {
           </div>
         </motion.div>
 
-        {/* Visual Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="relative h-80 rounded-2xl overflow-hidden shadow-xl group"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1639432038099-4379f2d421cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW50b3JzaGlwJTIweW91dGh8ZW58MXx8fHwxNzY3OTYxNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Mentorship"
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-2xl font-bold mb-2">Mentorship Sessions</h3>
-                <p className="text-gray-200">One-on-one guidance from experienced leaders</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative h-80 rounded-2xl overflow-hidden shadow-xl group"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}camp_image.jpeg`}
-              alt="Outdoor Camps"
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-2xl font-bold mb-2">Adventure Camps</h3>
-                <p className="text-gray-200">Building resilience through outdoor experiences</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="relative h-80 rounded-2xl overflow-hidden shadow-xl group"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}XSummerExperiences.jpeg`}
-              alt="X-Global Summer Experiences"
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-2xl font-bold mb-2">X-Global Summer Experiences</h3>
-                <p className="text-gray-200">Hands-on learning and innovation</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
         {/* Specialties */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
