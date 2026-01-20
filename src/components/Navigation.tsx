@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,13 +17,13 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'iDECIDE', href: '#idecide' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/', isRoute: true },
+    { name: 'About', href: '/about', isRoute: true },
+    { name: 'Programs', href: '#programs', isRoute: false },
+    { name: 'Gallery', href: '#gallery', isRoute: false },
+    { name: 'Blog', href: '#blog', isRoute: false },
+    { name: 'iDECIDE', href: '#idecide', isRoute: false },
+    { name: 'Contact', href: '#contact', isRoute: false },
   ];
 
   return (
@@ -31,26 +34,55 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <a href="#home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src={`${import.meta.env.BASE_URL}yazua_logo.png`} 
               alt="YAZUA AFRIKA Logo" 
               className="h-16 w-auto bg-transparent"
               style={{ backgroundColor: 'transparent' }}
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              if (link.isRoute) {
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
+                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              } else {
+                const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+                  if (location.pathname !== '/') {
+                    e.preventDefault();
+                    navigate('/');
+                    setTimeout(() => {
+                      const element = document.querySelector(link.href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }
+                };
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={handleHashClick}
+                    className="text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+            })}
             <button className="bg-[#FF6F3C] text-white px-6 py-2 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
               Donate
             </button>
@@ -74,16 +106,46 @@ export function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              if (link.isRoute) {
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
+                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              } else {
+                const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+                  setIsMobileMenuOpen(false);
+                  if (location.pathname !== '/') {
+                    e.preventDefault();
+                    navigate('/');
+                    setTimeout(() => {
+                      const element = document.querySelector(link.href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }
+                };
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={handleHashClick}
+                    className="block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+            })}
             <button className="w-full bg-[#FF6F3C] text-white px-6 py-3 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
               Donate
             </button>
