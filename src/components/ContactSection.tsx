@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Send, Facebook, Instagram, Linkedin, BookOpen } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Facebook, Instagram, Linkedin, BookOpen, Twitter } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function ContactSection() {
@@ -218,6 +218,15 @@ export function ContactSection() {
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
+                </a>
+                <a
+                  href="https://x.com/yazua_afrika"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors group"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
                 </a>
                 <a
                   href="https://substack.com/@ericmungai"
