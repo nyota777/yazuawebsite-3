@@ -18,7 +18,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -30,19 +30,19 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             We Train, Mentor, Coach, and Prepare Boys for{' '}
             <span className="text-[#FF6F3C]">Leadership</span>,{' '}
             <span className="text-[#FF6F3C]">Innovation</span>, and{' '}
             <span className="text-[#FF6F3C]">Social Impact</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Empowering young men through experiential learning, mentorship programs,
             outdoor activities, and project-based learning to create positive change
             in their communities.
