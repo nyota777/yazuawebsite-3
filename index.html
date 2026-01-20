@@ -6,6 +6,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>YAZUA AFRIKA - Empowering Young Men Through Leadership</title>
       <link rel="icon" type="image/png" href="/yazuawebsite-3/yazua_logo.png" />
+      <script>
+        // SPA routing support for GitHub Pages (handles direct visits like /about)
+        // Based on: https://github.com/rafgraph/spa-github-pages
+        (function (l) {
+          if (l.search[1] === '/') {
+            var decoded = l.search
+              .slice(1)
+              .split('&')
+              .map(function (s) {
+                return s.replace(/~and~/g, '&');
+              })
+              .join('?');
+            window.history.replaceState(
+              null,
+              null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+            );
+          }
+        })(window.location);
+      </script>
       <script type="module" crossorigin src="/yazuawebsite-3/assets/index-BMcF2d0b.js"></script>
       <link rel="stylesheet" crossorigin href="/yazuawebsite-3/assets/index-Dx4g5o-M.css">
     </head>
