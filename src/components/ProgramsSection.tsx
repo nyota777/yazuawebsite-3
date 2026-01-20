@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Target, Lightbulb, Mountain, BookOpen, ArrowRight, X, Users, CheckCircle } from 'lucide-react';
+import { Target, Lightbulb, Mountain, BookOpen, ArrowRight, X, Users, CheckCircle, DollarSign } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export function ProgramsSection() {
@@ -17,6 +17,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}forge_logo.png`,
       duration: '6 months',
       ageGroup: '12-14 years',
+      pricing: 'Kes. 128,500',
       detailedInfo: {
         focus: 'A 6-month flagship leadership program centered on identity and positive masculinity.',
         methodology: 'It utilizes physically challenging activities, such as obstacle courses and rock climbing, to build "grit".',
@@ -39,6 +40,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}build-image.jpg`,
       duration: '3 months',
       ageGroup: '18-24 years',
+      pricing: 'Kes. 31,500',
       detailedInfo: {
         focus: 'A 3-month semi-incubation program for older youth.',
         methodology: 'It emphasizes project-based learning where students submit ideas and prototypes for refinement with the help of experienced tutors and engineers.',
@@ -61,6 +63,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}iDECIDE-logo.jpeg`,
       duration: '6 months',
       ageGroup: '13-17 years',
+      pricing: 'Kes. 28,800',
       detailedInfo: {
         focus: 'A 6-month intensive life coaching model consisting of eight interactive sessions.',
         methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress.',
@@ -83,6 +86,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}Man_Up_Adventures.jpeg`,
       duration: '3-5 days',
       ageGroup: '9-13 years',
+      pricing: 'Kes. 1,500 - Kes. 9,500',
       detailedInfo: {
         focus: 'Short, high-impact excursions lasting 3–5 days.',
         methodology: 'Participants engage in hiking, camping, and outdoor obstacle courses.',
@@ -105,6 +109,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}mentorship-circle.jpg`,
       duration: 'Ongoing',
       ageGroup: 'All ages',
+      pricing: 'Kes. 1,500 - Kes. 3,500',
       detailedInfo: {
         focus: 'An ongoing initiative that connects young men with experienced leaders for one-on-one guidance.',
         methodology: 'Structured mentorship meetings with regular check-ins and goal tracking.',
@@ -127,6 +132,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}XGlobal_Summer_Camps.jpeg`,
       duration: '4 months',
       ageGroup: 'All ages',
+      pricing: '$350 - $5,000 (cost dependent on program)',
       detailedInfo: {
         focus: 'A 4-month program featuring hands-on design thinking workshops.',
         methodology: 'Participants collaborate on projects to develop innovative solutions for real-world problems.',
@@ -331,6 +337,18 @@ export function ProgramsSection() {
 
               {/* Content */}
               <div className="p-6 md:p-8">
+                {/* Pricing */}
+                {selectedProgram.pricing && (
+                  <div className="mb-8 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <DollarSign className="w-6 h-6 text-[#FF6F3C]" />
+                      Pricing
+                    </h3>
+                    <p className="text-2xl font-bold text-[#FF6F3C]">
+                      {selectedProgram.pricing}
+                    </p>
+                  </div>
+                )}
                 <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                   {selectedProgram.description}
                 </p>
