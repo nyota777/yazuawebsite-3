@@ -198,7 +198,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-7xl w-full h-[90vh] max-h-[90vh] p-0 bg-white overflow-hidden flex flex-col">
+      <DialogContent className="max-w-7xl w-full h-[90vh] max-h-[90vh] p-0 bg-white overflow-hidden flex flex-col z-[100]">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">

@@ -217,7 +217,11 @@ export function EventCalendar() {
                     {event.category}
                   </span>
                   <button
-                    onClick={() => setSelectedEventForCalendar(event)}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedEventForCalendar(event);
+                    }}
                     className="p-1 hover:bg-orange-50 rounded-full transition-colors cursor-pointer"
                     aria-label="View event in calendar"
                   >
@@ -296,6 +300,7 @@ export function EventCalendar() {
 
         <div className="text-center mt-12">
           <button
+            type="button"
             onClick={() => setFullCalendarOpen(true)}
             className="inline-block bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 font-semibold"
           >
@@ -305,10 +310,9 @@ export function EventCalendar() {
       </div>
 
       {/* Calendar Viewer Modal */}
-      <AnimatePresence>
-        {selectedEventForCalendar && (
-          <Dialog open={!!selectedEventForCalendar} onOpenChange={(open) => !open && setSelectedEventForCalendar(null)}>
-            <DialogContent className="max-w-md sm:max-w-lg bg-white border-gray-200 p-0 overflow-hidden">
+      {selectedEventForCalendar && (
+        <Dialog open={!!selectedEventForCalendar} onOpenChange={(open) => !open && setSelectedEventForCalendar(null)}>
+          <DialogContent className="max-w-md sm:max-w-lg bg-white border-gray-200 p-0 overflow-hidden z-[100]">
               <div className="p-6">
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -382,10 +386,9 @@ export function EventCalendar() {
                   />
                 </div>
               </div>
-            </DialogContent>
-          </Dialog>
-        )}
-      </AnimatePresence>
+          </DialogContent>
+        </Dialog>
+      )}
 
       {/* Full Calendar View Modal */}
       <FullCalendarView
