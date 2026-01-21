@@ -22,7 +22,7 @@ export function SpecialistsSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            Our <span className="text-[#c7211a]">Specialties</span>
+            Our <span className="text-[#FF6F3C]">Specialties</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((specialty, index) => (
@@ -35,7 +35,7 @@ export function SpecialistsSection() {
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
               >
                 {React.createElement(specialty.icon, {
-                  className: 'w-12 h-12 text-[#78912b] mx-auto mb-4',
+                  className: 'w-12 h-12 text-orange-600 mx-auto mb-4',
                 })}
                 <p className="text-gray-900 font-semibold">{specialty.label}</p>
               </motion.div>

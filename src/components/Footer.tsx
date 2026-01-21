@@ -25,7 +25,7 @@ export function Footer() {
                 href="https://www.facebook.com/yazua.afrika?mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -34,7 +34,7 @@ export function Footer() {
                 href="https://www.instagram.com/yazua.afrika?igsh=dWQ0NDdia3lsdzho"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -43,7 +43,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/ericmungai-yazua?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -52,14 +52,14 @@ export function Footer() {
                 href="https://substack.com/@ericmungai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="Substack"
               >
                 <BookOpen className="w-5 h-5" />
               </a>
               <a
                 href="mailto:info@yazuaafrika.com"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -72,7 +72,7 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="hover:text-[#78912b] transition-colors">
+                <a href="#home" className="hover:text-[#FF6F3C] transition-colors">
                   Home
                 </a>
               </li>
@@ -151,27 +151,27 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-[#78912b] text-white text-sm"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-[#FF6F3C] text-white text-sm"
               />
-              <button className="bg-[#78912b] px-4 py-2 rounded-r-lg hover:bg-[#4e2b14] transition-colors">
+              <button className="bg-[#FF6F3C] px-4 py-2 rounded-r-lg hover:bg-[#e55a2a] transition-colors">
                 <Mail className="w-5 h-5" />
               </button>
             </div>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#78912b]" />
-                <a href="tel:+254734631650" className="hover:text-[#78912b] transition-colors">
+                <Phone className="w-4 h-4 text-[#FF6F3C]" />
+                <a href="tel:+254734631650" className="hover:text-[#FF6F3C] transition-colors">
                   +254 734 631 650
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#78912b]" />
-                <a href="mailto:info@yazuaafrika.com" className="hover:text-[#78912b] transition-colors">
+                <Mail className="w-4 h-4 text-[#FF6F3C]" />
+                <a href="mailto:info@yazuaafrika.com" className="hover:text-[#FF6F3C] transition-colors">
                   info@yazuaafrika.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#78912b]" />
+                <MapPin className="w-4 h-4 text-[#FF6F3C]" />
                 <span>Karen, Nairobi, Kenya</span>
               </div>
             </div>
@@ -182,13 +182,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p>© 2026 YAZUA AFRIKA. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-[#78912b] transition-colors">
+              <a href="#" className="hover:text-orange-600 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-[#78912b] transition-colors">
+              <a href="#" className="hover:text-orange-600 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-[#78912b] transition-colors">
+              <a href="#" className="hover:text-orange-600 transition-colors">
                 Cookie Policy
               </a>
             </div>

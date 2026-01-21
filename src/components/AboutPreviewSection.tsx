@@ -15,7 +15,7 @@ export function AboutPreviewSection() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About <span className="text-[#c7211a]">Yazua Afrika</span>
+            About <span className="text-[#FF6F3C]">Yazua Afrika</span>
           </h2>
           <div className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
             <p>

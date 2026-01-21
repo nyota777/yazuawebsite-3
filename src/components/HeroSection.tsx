@@ -38,9 +38,9 @@ export function HeroSection() {
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             We Train, Mentor, Coach, and Prepare Boys for{' '}
-            <span className="text-[#c7211a]">Leadership</span>,{' '}
-            <span className="text-[#78912b]">Innovation</span>, and{' '}
-            <span className="text-[#c7211a]">Social Impact</span>
+            <span className="text-[#FF6F3C]">Leadership</span>,{' '}
+            <span className="text-[#FF6F3C]">Innovation</span>, and{' '}
+            <span className="text-[#FF6F3C]">Social Impact</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Empowering young men through experiential learning, mentorship programs,
@@ -51,7 +51,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="#programs"
-              className="bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg"
+              className="bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg"
             >
               Join a Program <ArrowRight className="w-5 h-5" />
             </a>

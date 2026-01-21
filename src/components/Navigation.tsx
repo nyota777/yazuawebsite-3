@@ -51,8 +51,8 @@ export function Navigation() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-gray-700 hover:text-[#78912b] transition-colors duration-200 ${
-                      location.pathname === link.href ? 'text-[#78912b] font-semibold' : ''
+                    className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
+                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
                     }`}
                   >
                     {link.name}
@@ -76,7 +76,7 @@ export function Navigation() {
                     key={link.name}
                     href={link.href}
                     onClick={handleHashClick}
-                    className="text-gray-700 hover:text-[#78912b] transition-colors duration-200"
+                    className="text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
                   >
                     {link.name}
                   </a>
