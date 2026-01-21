@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Calendar } from './ui/calendar';
 import { cn } from './ui/utils';
+import { FullCalendarView, Event } from './FullCalendarView';
 
 export function EventCalendar() {
   const REGISTER_URL = 'https://book.heygoldie.com/Yazua-Afrika';
@@ -168,6 +169,7 @@ export function EventCalendar() {
   });
 
   const [selectedEventForCalendar, setSelectedEventForCalendar] = useState<EventItem | null>(null);
+  const [fullCalendarOpen, setFullCalendarOpen] = useState(false);
 
   const events = useMemo(() => {
     return initialEvents.map((e) => {
@@ -293,14 +295,12 @@ export function EventCalendar() {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105"
+          <button
+            onClick={() => setFullCalendarOpen(true)}
+            className="inline-block bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 font-semibold"
           >
             View Full Calendar
-          </a>
+          </button>
         </div>
       </div>
 
@@ -386,6 +386,97 @@ export function EventCalendar() {
           </Dialog>
         )}
       </AnimatePresence>
+
+      {/* Full Calendar View Modal */}
+      <FullCalendarView
+        open={fullCalendarOpen}
+        onOpenChange={setFullCalendarOpen}
+        events={useMemo(() => {
+          const now = new Date();
+          const manupNext = getNextThirdSaturday(now);
+          const forgeStart = new Date('2026-07-13T00:00:00');
+          const forgeEnd = new Date('2026-07-26T00:00:00');
+          const workshopStart = new Date('2026-03-19T00:00:00');
+          const workshopEnd = new Date('2026-03-21T00:00:00');
+          const firepit = new Date('2026-03-20T00:00:00');
+          const parentInfo = new Date('2026-04-25T00:00:00');
+          const showcase = new Date('2026-05-10T00:00:00');
+
+          return [
+            {
+              id: 'forge-july-camp',
+              title: 'FORGE July Camp',
+              category: 'Camp' as const,
+              startDate: forgeStart,
+              endDate: forgeEnd,
+              time: 'July Camp: 13th - 26th July',
+              location: 'Location TBC',
+              recurrence: null,
+              slotsTotal: 12,
+              slotsRemaining: 12,
+            },
+            {
+              id: 'manup-monthly',
+              title: 'ManUp Leadership Adventure',
+              category: 'Workshop' as const,
+              startDate: manupNext,
+              time: 'Registration Ongoing - Every Third Saturday of the month',
+              location: 'Location TBC',
+              recurrence: 'monthly' as const,
+            },
+            {
+              id: 'build-firepit-session',
+              title: 'BUILD Coaching Session',
+              category: 'Coaching' as const,
+              startDate: firepit,
+              time: '4:00 PM - 7:00 PM',
+              location: 'Location TBC',
+              recurrence: null,
+              slotsTotal: 8,
+              slotsRemaining: 8,
+            },
+            {
+              id: 'idecide-life-coaching',
+              title: 'iDECIDE Life Coaching Session',
+              category: 'Coaching' as const,
+              startDate: now,
+              time: '10:00 AM - 1:00 PM (personalised)',
+              location: 'Online & In-Person',
+              recurrence: null,
+              showJoinNow: true,
+            },
+            {
+              id: 'parent-info-session',
+              title: 'Parent Information Session',
+              category: 'Info Session' as const,
+              startDate: parentInfo,
+              time: '6:00 PM - 8:00 PM',
+              location: 'Online',
+              recurrence: 'quarterly' as const,
+              showJoinNow: true,
+            },
+            {
+              id: 'community-impact-showcase',
+              title: 'Community Impact Showcase',
+              category: 'Workshop' as const,
+              startDate: showcase,
+              time: '10:00 AM - 6:00 PM',
+              location: 'Embrace Boys Centre - Ruiru',
+              recurrence: null,
+            },
+            {
+              id: 'forge-facilitators-workshop',
+              title: 'FORGE Facilitators Workshop',
+              category: 'Workshop' as const,
+              startDate: workshopStart,
+              endDate: workshopEnd,
+              time: '11:00 AM - 3:00 PM',
+              location: 'YAZUA AFRIKA Headquarters',
+              recurrence: null,
+            },
+          ];
+        }, [])}
+      />
     </section>
   );
 }
