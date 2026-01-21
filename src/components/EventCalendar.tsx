@@ -1,6 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import { Calendar, MapPin, Clock, ArrowRight, Users } from 'lucide-react';
-import { motion } from 'motion/react';
+import { Calendar as CalendarIcon, MapPin, Clock, ArrowRight, Users } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
+import { Calendar } from './ui/calendar';
+import { cn } from './ui/utils';
 
 export function EventCalendar() {
   const REGISTER_URL = 'https://book.heygoldie.com/Yazua-Afrika';
@@ -164,6 +167,8 @@ export function EventCalendar() {
     return initial;
   });
 
+  const [selectedEventForCalendar, setSelectedEventForCalendar] = useState<EventItem | null>(null);
+
   const events = useMemo(() => {
     return initialEvents.map((e) => {
       if (typeof e.slotsRemaining !== 'number') return e;
@@ -209,14 +214,20 @@ export function EventCalendar() {
                   <span className="text-xs font-semibold uppercase tracking-wide text-gray-500">
                     {event.category}
                   </span>
-                  <Calendar className="w-5 h-5 text-[#FF6F3C]" />
+                  <button
+                    onClick={() => setSelectedEventForCalendar(event)}
+                    className="p-1 hover:bg-orange-50 rounded-full transition-colors cursor-pointer"
+                    aria-label="View event in calendar"
+                  >
+                    <CalendarIcon className="w-5 h-5 text-[#FF6F3C] hover:text-[#e55a2a]" />
+                  </button>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#FF6F3C] transition-colors">
                   {event.title}
                 </h3>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3 text-sm text-gray-600">
-                    <Calendar className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#006B3F]" />
+                    <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#006B3F]" />
                     <span>{event.dateLabel}</span>
                   </div>
                   <div className="flex items-start gap-3 text-sm text-gray-600">
@@ -292,6 +303,89 @@ export function EventCalendar() {
           </a>
         </div>
       </div>
+
+      {/* Calendar Viewer Modal */}
+      <AnimatePresence>
+        {selectedEventForCalendar && (
+          <Dialog open={!!selectedEventForCalendar} onOpenChange={(open) => !open && setSelectedEventForCalendar(null)}>
+            <DialogContent className="max-w-md sm:max-w-lg bg-white border-gray-200 p-0 overflow-hidden">
+              <div className="p-6">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-gray-900 mb-4">
+                    {selectedEventForCalendar.title}
+                  </DialogTitle>
+                </DialogHeader>
+
+                {/* Event Details */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3 text-sm text-gray-700">
+                    <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+                    <span className="font-medium">{selectedEventForCalendar.dateLabel}</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-gray-700">
+                    <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+                    <span>{selectedEventForCalendar.time}</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-gray-700">
+                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+                    <span>{selectedEventForCalendar.location}</span>
+                  </div>
+                  {typeof selectedEventForCalendar.slotsRemaining === 'number' && (
+                    <div className="flex items-start gap-3 text-sm text-gray-700">
+                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+                      <span>
+                        Slots remaining: <span className="font-semibold">{selectedEventForCalendar.slotsRemaining}</span>
+                        {typeof selectedEventForCalendar.slotsTotal === 'number' ? ` / ${selectedEventForCalendar.slotsTotal}` : ''}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Calendar View */}
+                <div className="border-t border-gray-200 pt-6">
+                  <Calendar
+                    mode={selectedEventForCalendar.endDate ? 'range' : 'single'}
+                    selected={
+                      selectedEventForCalendar.endDate
+                        ? { from: selectedEventForCalendar.sortDate, to: selectedEventForCalendar.endDate }
+                        : selectedEventForCalendar.sortDate
+                    }
+                    className="rounded-md border-0"
+                    classNames={{
+                      months: 'flex flex-col sm:flex-row gap-4',
+                      month: 'space-y-4',
+                      caption: 'flex justify-center pt-1 relative items-center',
+                      caption_label: 'text-sm font-medium text-gray-900',
+                      nav: 'space-x-1 flex items-center',
+                      nav_button: cn(
+                        'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 text-gray-900 hover:bg-gray-100 rounded-md'
+                      ),
+                      nav_button_previous: 'absolute left-1',
+                      nav_button_next: 'absolute right-1',
+                      table: 'w-full border-collapse space-y-1',
+                      head_row: 'flex',
+                      head_cell: 'text-gray-500 rounded-md w-9 font-normal text-[0.8rem]',
+                      row: 'flex w-full mt-2',
+                      cell: 'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-gray-50 [&:has([aria-selected])]:bg-orange-50 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
+                      day: cn(
+                        'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-100 rounded-md'
+                      ),
+                      day_range_end: 'day-range-end',
+                      day_selected: 'bg-[#FF6F3C] text-white hover:bg-[#e55a2a] hover:text-white focus:bg-[#FF6F3C] focus:text-white',
+                      day_today: 'bg-orange-100 text-gray-900 font-semibold',
+                      day_outside: 'day-outside text-gray-400 opacity-50 aria-selected:bg-gray-50 aria-selected:text-gray-400',
+                      day_disabled: 'text-gray-300 opacity-50',
+                      day_range_middle: 'aria-selected:bg-orange-100 aria-selected:text-gray-900',
+                      day_hidden: 'invisible',
+                    }}
+                    disabled
+                  />
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
