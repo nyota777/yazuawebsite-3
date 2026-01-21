@@ -5,6 +5,39 @@ import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
 
 export function AboutPage() {
+  const milestones = [
+    { 
+      year: '2011', 
+      title: 'Carpe Diem Consultancy Registered', 
+      description: 'Registered Carpe Diem Consultancy to help drive and give the mentorship programs a vehicle for operations.' 
+    },
+    { 
+      year: '2016', 
+      title: 'First Structured Mentorship Curriculum', 
+      description: 'Developed the first structured mentorship curriculum for teenage boys. Took 200 boys through the model in sports academies, schools and churches.' 
+    },
+    { 
+      year: '2019', 
+      title: 'Rites of Passage & BUILD Models', 
+      description: 'Developed a 1. Rites of Passage Model 2. BUILD Model for boys aged 18 - 24 years. 3. Completed the iDECIDE Journal of Mentorship for boys.' 
+    },
+    { 
+      year: '2020', 
+      title: 'First Online Mentorship Program', 
+      description: 'Ran the first fully online boys mentorship program over the Covid years.' 
+    },
+    { 
+      year: '2021', 
+      title: 'Leadership & Entrepreneurship Games', 
+      description: 'Developed a puzzle and card game for mentoring boys on leadership and entrepreneurship within the continent of Africa.' 
+    },
+    { 
+      year: '2022', 
+      title: 'Continental Expansion & National Strategy Development', 
+      description: 'Secured strategic partnerships with 5 boys high schools across Kenya, establishing our mentorship programs as a cornerstone of youth development. Expanded our reach with implementation and presence in 5 African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo. Developed the National Male Engagement Strategy for Kenya, positioning YAZUA AFRIKA as a key player in shaping the future of boys\' mentorship at a national level.' 
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -83,6 +116,52 @@ export function AboutPage() {
                 At Yazua Afrika, we believe lasting change happens when people are equipped, supported, and inspired to lead transformation within their own communities.
               </p>
             </motion.div>
+          </motion.div>
+
+          {/* Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-20"
+          >
+            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+              Our Journey
+            </h3>
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-200 hidden md:block"></div>
+
+              <div className="space-y-12">
+                {milestones.map((milestone, index) => (
+                  <motion.div
+                    key={milestone.year}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                    className={`flex items-center ${
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    } flex-col`}
+                  >
+                    <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div className="text-4xl font-bold text-orange-600 mb-2">
+                          {milestone.year}
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">
+                          {milestone.title}
+                        </h4>
+                        <p className="text-gray-600">{milestone.description}</p>
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/12 flex justify-center my-4 md:my-0">
+                      <div className="w-6 h-6 bg-orange-600 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div className="w-full md:w-5/12"></div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
