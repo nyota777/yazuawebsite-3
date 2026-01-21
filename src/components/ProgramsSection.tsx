@@ -10,6 +10,29 @@ export function ProgramsSection() {
 
   const programs = [
     {
+      name: 'MAN UP LEADERSHIP ADVENTURES (AGES 9-13)', 
+      category: 'Outdoor Adventure',
+      description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
+      icon: Mountain,
+      image: `${import.meta.env.BASE_URL}Man_Up_Adventures.jpeg`,
+      duration: '3-5 days',
+      ageGroup: '9-13 years',
+      pricing: 'Kes. 1,500 - Kes. 9,500',
+      detailedInfo: {
+        focus: 'Short, high-impact excursions lasting 3–5 days.',
+        methodology: 'Participants engage in hiking, camping, and outdoor obstacle courses.',
+        purpose: 'These adventures are designed to help young men discover their leadership potential and mission through group challenges and experiential learning.',
+        keyFeatures: [
+          'Multi-day hiking expeditions',
+          'Camping and outdoor survival skills',
+          'Outdoor obstacle courses',
+          'Group leadership challenges',
+          'Experiential learning activities',
+          'Character development exercises'
+        ]
+      }
+    },
+    {
       name: 'FORGE (Ages 12-14)',
       category: 'Rites of Passage',
       description: 'A flagship 6-month program using physically challenging activities like obstacle courses and rock climbing to build grit, leadership, and identity through Rites of Passage.',
@@ -29,29 +52,6 @@ export function ProgramsSection() {
           'Positive masculinity coaching',
           'Rites of Passage preparation',
           'Entrepreneurial leadership mindset'
-        ]
-      }
-    },
-    {
-      name: 'BUILD (Ages 18-24)',
-      category: 'LEADERSHIP',
-      description: 'A 3-month semi-incubation program for older youth focused on innovation, entrepreneurial leadership, and turning ideas into tangible projects and social enterprises.',
-      icon: Lightbulb,
-      image: `${import.meta.env.BASE_URL}build-image.jpg`,
-      duration: '3 months',
-      ageGroup: '18-24 years',
-      pricing: 'Kes. 31,500',
-      detailedInfo: {
-        focus: 'A 3-month semi-incubation program for older youth.',
-        methodology: 'It emphasizes project-based learning where students submit ideas and prototypes for refinement with the help of experienced tutors and engineers.',
-        purpose: 'The goal is to turn innovative ideas into tangible projects and social enterprises, connecting the best participants with investors and industry partners for commercialization.',
-        keyFeatures: [
-          'Project-based learning approach',
-          'Idea and prototype development',
-          'Mentorship from experienced tutors and engineers',
-          'Social enterprise development',
-          'Investor connections',
-          'Industry partnership opportunities'
         ]
       }
     },
@@ -79,25 +79,25 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'MAN UP LEADERSHIP ADVENTURES (AGES 9-13)', 
-      category: 'Outdoor Adventure',
-      description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
-      icon: Mountain,
-      image: `${import.meta.env.BASE_URL}Man_Up_Adventures.jpeg`,
-      duration: '3-5 days',
-      ageGroup: '9-13 years',
-      pricing: 'Kes. 1,500 - Kes. 9,500',
+      name: 'BUILD (Ages 18-24)',
+      category: 'LEADERSHIP',
+      description: 'A 3-month semi-incubation program for older youth focused on innovation, entrepreneurial leadership, and turning ideas into tangible projects and social enterprises.',
+      icon: Lightbulb,
+      image: `${import.meta.env.BASE_URL}build-image.jpg`,
+      duration: '3 months',
+      ageGroup: '18-24 years',
+      pricing: 'Kes. 31,500',
       detailedInfo: {
-        focus: 'Short, high-impact excursions lasting 3–5 days.',
-        methodology: 'Participants engage in hiking, camping, and outdoor obstacle courses.',
-        purpose: 'These adventures are designed to help young men discover their leadership potential and mission through group challenges and experiential learning.',
+        focus: 'A 3-month semi-incubation program for older youth.',
+        methodology: 'It emphasizes project-based learning where students submit ideas and prototypes for refinement with the help of experienced tutors and engineers.',
+        purpose: 'The goal is to turn innovative ideas into tangible projects and social enterprises, connecting the best participants with investors and industry partners for commercialization.',
         keyFeatures: [
-          'Multi-day hiking expeditions',
-          'Camping and outdoor survival skills',
-          'Outdoor obstacle courses',
-          'Group leadership challenges',
-          'Experiential learning activities',
-          'Character development exercises'
+          'Project-based learning approach',
+          'Idea and prototype development',
+          'Mentorship from experienced tutors and engineers',
+          'Social enterprise development',
+          'Investor connections',
+          'Industry partnership opportunities'
         ]
       }
     },
