@@ -28,6 +28,28 @@ type FullCalendarViewProps = {
 
 type ViewMode = 'calendar' | 'list';
 
+// Helper functions (defined outside component to avoid hoisting issues)
+const formatDateKey = (date: Date): string => {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
+
+const getThirdSaturdayOfMonth = (date: Date): Date => {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  let saturdayCount = 0;
+  for (let day = 1; day <= 31; day++) {
+    const d = new Date(year, month, day);
+    if (d.getMonth() !== month) break;
+    if (d.getDay() === 6) {
+      saturdayCount += 1;
+      if (saturdayCount === 3) {
+        return d;
+      }
+    }
+  }
+  return new Date(year, month, 1);
+};
+
 export function FullCalendarView({ open, onOpenChange, events }: FullCalendarViewProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('calendar');
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
@@ -124,28 +146,6 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
         return formatDateKey(eventDate) === formatDateKey(checkDate);
       }
     });
-  };
-
-  // Helper functions
-  const formatDateKey = (date: Date): string => {
-    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-  };
-
-  const getThirdSaturdayOfMonth = (date: Date): Date => {
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    let saturdayCount = 0;
-    for (let day = 1; day <= 31; day++) {
-      const d = new Date(year, month, day);
-      if (d.getMonth() !== month) break;
-      if (d.getDay() === 6) {
-        saturdayCount += 1;
-        if (saturdayCount === 3) {
-          return d;
-        }
-      }
-    }
-    return new Date(year, month, 1);
   };
 
   const getNextThirdSaturday = (from: Date): Date => {
