@@ -110,7 +110,7 @@ export function ContactSection() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
+                className="w-full bg-[#78912b] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
               >
                 Send Message <Send className="w-5 h-5" />
               </button>
@@ -129,7 +129,7 @@ export function ContactSection() {
             <div className="space-y-4">
               <div className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#c7211a] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#78912b] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -142,14 +142,14 @@ export function ContactSection() {
 
               <div className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#c7211a] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#78912b] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Phone</h3>
                     <a
                       href="tel:+254734631650"
-                      className="text-gray-400 hover:text-[#c7211a] transition-colors"
+                      className="text-gray-400 hover:text-[#78912b] transition-colors"
                     >
                       +254 734 631 650
                     </a>
@@ -159,7 +159,7 @@ export function ContactSection() {
 
               <div className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#c7211a] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#78912b] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -196,7 +196,7 @@ export function ContactSection() {
                   href="https://www.facebook.com/yazua.afrika?mibextid=ZbWKwL"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
@@ -205,7 +205,7 @@ export function ContactSection() {
                   href="https://www.instagram.com/yazua.afrika?igsh=dWQ0NDdia3lsdzho"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
@@ -214,7 +214,7 @@ export function ContactSection() {
                   href="https://www.linkedin.com/in/ericmungai-yazua?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
@@ -223,7 +223,7 @@ export function ContactSection() {
                   href="https://x.com/yazua_afrika"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
@@ -232,14 +232,14 @@ export function ContactSection() {
                   href="https://substack.com/@ericmungai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="Substack"
                 >
                   <BookOpen className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
                 </a>
                 <a
                   href="mailto:info@yazuaafrika.com"
-                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#c7211a] transition-colors group"
+                  className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-[#78912b] transition-colors group"
                   aria-label="Email"
                 >
                   <Mail className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />

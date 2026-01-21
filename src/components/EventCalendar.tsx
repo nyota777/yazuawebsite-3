@@ -113,7 +113,7 @@ export function EventCalendar() {
         id: 'build-firepit-session',
         title: 'BUILD Coaching Sessions - Group FirePit Session',
         category: 'Coaching',
-        color: 'bg-[#c7211a]',
+        color: 'bg-[#78912b]',
         dateLabel: formatDate(firepit),
         sortDate: firepit,
         time: '4:00 PM - 7:00 PM',
@@ -125,7 +125,7 @@ export function EventCalendar() {
         id: 'parent-info-session',
         title: 'Parent Information Session',
         category: 'Information Session',
-        color: 'bg-[#c7211a]',
+        color: 'bg-[#78912b]',
         dateLabel: formatDate(parentInfo),
         sortDate: parentInfo,
         time: '6:00 PM - 8:00 PM (every quarter)',
@@ -146,7 +146,7 @@ export function EventCalendar() {
         id: 'forge-july-camp',
         title: 'FORGE - Registration On-going (July Camp)',
         category: 'Program',
-        color: 'bg-[#c7211a]',
+        color: 'bg-[#78912b]',
         dateLabel: formatDateRange(forgeStart, forgeEnd),
         sortDate: forgeStart,
         endDate: forgeEnd,
@@ -225,10 +225,10 @@ export function EventCalendar() {
                     className="p-1 hover:bg-red-50 rounded-full transition-colors cursor-pointer"
                     aria-label="View event in calendar"
                   >
-                    <CalendarIcon className="w-5 h-5 text-[#c7211a] hover:text-[#4e2b14]" />
+                    <CalendarIcon className="w-5 h-5 text-[#78912b] hover:text-[#4e2b14]" />
                   </button>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#c7211a] transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#78912b] transition-colors">
                   {event.title}
                 </h3>
                 <div className="space-y-3 mb-6">
@@ -270,7 +270,7 @@ export function EventCalendar() {
                     className={`flex items-center justify-center gap-2 font-semibold transition-all duration-300 ${
                       typeof event.slotsRemaining === 'number' && event.slotsRemaining <= 0
                         ? 'text-gray-400 cursor-not-allowed'
-                        : 'text-[#c7211a] hover:gap-4'
+                        : 'text-[#78912b] hover:gap-4'
                     }`}
                     aria-disabled={typeof event.slotsRemaining === 'number' && event.slotsRemaining <= 0}
                     onMouseDown={(e) => {
@@ -302,7 +302,7 @@ export function EventCalendar() {
           <button
             type="button"
             onClick={() => setFullCalendarOpen(true)}
-            className="inline-block bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 font-semibold"
+            className="inline-block bg-[#78912b] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 font-semibold"
           >
             View Full Calendar
           </button>
@@ -323,20 +323,20 @@ export function EventCalendar() {
                 {/* Event Details */}
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3 text-sm text-gray-700">
-                    <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
+                    <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#78912b]" />
                     <span className="font-medium">{selectedEventForCalendar.dateLabel}</span>
                   </div>
                   <div className="flex items-start gap-3 text-sm text-gray-700">
-                    <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
+                    <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#78912b]" />
                     <span>{selectedEventForCalendar.time}</span>
                   </div>
                   <div className="flex items-start gap-3 text-sm text-gray-700">
-                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
+                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#78912b]" />
                     <span>{selectedEventForCalendar.location}</span>
                   </div>
                   {typeof selectedEventForCalendar.slotsRemaining === 'number' && (
                     <div className="flex items-start gap-3 text-sm text-gray-700">
-                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
+                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#78912b]" />
                       <span>
                         Slots remaining: <span className="font-semibold">{selectedEventForCalendar.slotsRemaining}</span>
                         {typeof selectedEventForCalendar.slotsTotal === 'number' ? ` / ${selectedEventForCalendar.slotsTotal}` : ''}
@@ -375,11 +375,11 @@ export function EventCalendar() {
                         'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-100 rounded-md'
                       ),
                       day_range_end: 'day-range-end',
-                      day_selected: 'bg-[#c7211a] text-white hover:bg-[#4e2b14] hover:text-white focus:bg-[#c7211a] focus:text-white',
-                      day_today: 'bg-red-100 text-gray-900 font-semibold',
+                      day_selected: 'bg-[#78912b] text-white hover:bg-[#4e2b14] hover:text-white focus:bg-[#78912b] focus:text-white',
+                      day_today: 'bg-green-100 text-gray-900 font-semibold',
                       day_outside: 'day-outside text-gray-400 opacity-50 aria-selected:bg-gray-50 aria-selected:text-gray-400',
                       day_disabled: 'text-gray-300 opacity-50',
-                      day_range_middle: 'aria-selected:bg-red-100 aria-selected:text-gray-900',
+                      day_range_middle: 'aria-selected:bg-green-100 aria-selected:text-gray-900',
                       day_hidden: 'invisible',
                     }}
                     disabled

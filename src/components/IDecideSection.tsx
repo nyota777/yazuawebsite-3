@@ -80,7 +80,7 @@ export function IDecideSection() {
   };
 
   return (
-    <section id="idecide" className="py-20 bg-gradient-to-br from-red-50 to-gray-50">
+    <section id="idecide" className="py-20 bg-gradient-to-br from-green-50 to-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,7 +90,7 @@ export function IDecideSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="text-[#c7211a]">iDECIDE</span> - Find Your Path
+            <span className="text-[#78912b]">iDECIDE</span> - Find Your Path
           </h2>
           <p className="text-xl text-gray-600">
             Answer a few questions to discover which YAZUA AFRIKA program is right for you.
@@ -112,7 +112,7 @@ export function IDecideSection() {
                   <span className="text-sm font-semibold text-gray-600">
                     Question {currentStep + 1} of {questions.length}
                   </span>
-                  <span className="text-sm font-semibold text-[#c7211a]">
+                  <span className="text-sm font-semibold text-[#78912b]">
                     {Math.round(((currentStep + 1) / questions.length) * 100)}%
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export function IDecideSection() {
                       width: `${((currentStep + 1) / questions.length) * 100}%`,
                     }}
                     transition={{ duration: 0.5 }}
-                    className="h-full bg-gradient-to-r from-[#c7211a] to-[#4e2b14] rounded-full"
+                    className="h-full bg-gradient-to-r from-[#78912b] to-[#4e2b14] rounded-full"
                   />
                 </div>
               </div>
@@ -148,18 +148,18 @@ export function IDecideSection() {
                       onClick={() => handleAnswer(option.text)}
                       className={`w-full flex items-center gap-4 p-6 rounded-2xl border-2 transition-all duration-300 ${
                         answers[currentStep] === option.text
-                          ? 'border-[#c7211a] bg-red-50'
-                          : 'border-gray-200 hover:border-red-300 hover:bg-gray-50'
+                          ? 'border-[#78912b] bg-green-50'
+                          : 'border-gray-200 hover:border-green-300 hover:bg-gray-50'
                       }`}
                     >
                       {React.createElement(option.icon, {
-                        className: 'w-8 h-8 text-[#c7211a] flex-shrink-0',
+                        className: 'w-8 h-8 text-[#78912b] flex-shrink-0',
                       })}
                       <span className="text-left text-lg text-gray-900 font-medium">
                         {option.text}
                       </span>
                       {answers[currentStep] === option.text && (
-                        <CheckCircle className="w-6 h-6 text-[#c7211a] ml-auto" />
+                        <CheckCircle className="w-6 h-6 text-[#78912b] ml-auto" />
                       )}
                     </motion.button>
                   ))}
@@ -170,7 +170,7 @@ export function IDecideSection() {
               {currentStep > 0 && (
                 <button
                   onClick={() => setCurrentStep(currentStep - 1)}
-                  className="mt-8 text-[#c7211a] hover:text-[#4e2b14] font-semibold"
+                  className="mt-8 text-[#78912b] hover:text-[#4e2b14] font-semibold"
                 >
                   ← Previous Question
                 </button>
@@ -189,19 +189,19 @@ export function IDecideSection() {
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Perfect Match Found!
               </h3>
-              <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 mb-8">
-                <h4 className="text-2xl font-bold text-[#c7211a] mb-3">
+              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 mb-8">
+                <h4 className="text-2xl font-bold text-[#78912b] mb-3">
                   {getRecommendation().program}
                 </h4>
                 <p className="text-lg text-gray-700">{getRecommendation().description}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105">
+                <button className="bg-[#78912b] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105">
                   Apply to This Program
                 </button>
                 <button
                   onClick={resetQuiz}
-                  className="border-2 border-[#c7211a] text-[#c7211a] px-8 py-4 rounded-full hover:bg-red-50 transition-all duration-300"
+                  className="border-2 border-[#78912b] text-[#78912b] px-8 py-4 rounded-full hover:bg-green-50 transition-all duration-300"
                 >
                   Retake Quiz
                 </button>
@@ -213,8 +213,8 @@ export function IDecideSection() {
         {/* Info Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-6 h-6 text-[#c7211a]" />
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Target className="w-6 h-6 text-[#78912b]" />
             </div>
             <h4 className="font-bold text-gray-900 mb-2">Personalized Path</h4>
             <p className="text-sm text-gray-600">
@@ -222,8 +222,8 @@ export function IDecideSection() {
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-[#c7211a]" />
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-6 h-6 text-[#78912b]" />
             </div>
             <h4 className="font-bold text-gray-900 mb-2">Expert Guidance</h4>
             <p className="text-sm text-gray-600">
@@ -231,8 +231,8 @@ export function IDecideSection() {
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Lightbulb className="w-6 h-6 text-[#c7211a]" />
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Lightbulb className="w-6 h-6 text-[#78912b]" />
             </div>
             <h4 className="font-bold text-gray-900 mb-2">Real Impact</h4>
             <p className="text-sm text-gray-600">

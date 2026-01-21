@@ -35,7 +35,7 @@ export function SpecialistsSection() {
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
               >
                 {React.createElement(specialty.icon, {
-                  className: 'w-12 h-12 text-[#c7211a] mx-auto mb-4',
+                  className: 'w-12 h-12 text-[#78912b] mx-auto mb-4',
                 })}
                 <p className="text-gray-900 font-semibold">{specialty.label}</p>
               </motion.div>

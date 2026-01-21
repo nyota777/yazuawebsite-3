@@ -204,7 +204,7 @@ export function ProgramsSection() {
               onClick={() => setActiveFilter(filter)}
               className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeFilter === filter
-                  ? 'bg-[#c7211a] text-white shadow-lg'
+                  ? 'bg-[#78912b] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -231,16 +231,16 @@ export function ProgramsSection() {
                   alt={program.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-[#c7211a] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-[#78912b] text-white px-4 py-2 rounded-full text-sm font-semibold">
                   {program.duration}
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   {React.createElement(program.icon, {
-                    className: 'w-8 h-8 text-[#c7211a]',
+                    className: 'w-8 h-8 text-[#78912b]',
                   })}
-                  <span className="text-sm text-[#c7211a] font-semibold uppercase tracking-wide">
+                  <span className="text-sm text-[#78912b] font-semibold uppercase tracking-wide">
                     {program.category}
                   </span>
                 </div>
@@ -268,7 +268,7 @@ export function ProgramsSection() {
                     >
                       Book Now <ArrowRight className="w-5 h-5" />
                     </a>
-                    <button className="flex items-center gap-2 text-[#c7211a] font-semibold hover:gap-4 transition-all duration-300">
+                    <button className="flex items-center gap-2 text-[#78912b] font-semibold hover:gap-4 transition-all duration-300">
                       Learn More <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
@@ -319,9 +319,9 @@ export function ProgramsSection() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-center gap-3 mb-3">
                     {React.createElement(selectedProgram.icon, {
-                      className: 'w-10 h-10 text-[#c7211a]',
+                      className: 'w-10 h-10 text-[#78912b]',
                     })}
-                    <span className="text-sm text-white font-semibold uppercase tracking-wide bg-[#c7211a] px-3 py-1 rounded-full">
+                    <span className="text-sm text-white font-semibold uppercase tracking-wide bg-[#78912b] px-3 py-1 rounded-full">
                       {selectedProgram.category}
                     </span>
                   </div>
@@ -339,12 +339,12 @@ export function ProgramsSection() {
               <div className="p-6 md:p-8">
                 {/* Pricing */}
                 {selectedProgram.pricing && (
-                  <div className="mb-8 bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-6 border-2 border-red-200">
+                  <div className="mb-8 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-6 border-2 border-green-200">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                      <DollarSign className="w-6 h-6 text-[#c7211a]" />
+                      <DollarSign className="w-6 h-6 text-[#78912b]" />
                       Pricing
                     </h3>
-                    <p className="text-2xl font-bold text-[#c7211a]">
+                    <p className="text-2xl font-bold text-[#78912b]">
                       {selectedProgram.pricing}
                     </p>
                   </div>
@@ -356,7 +356,7 @@ export function ProgramsSection() {
                 {/* Focus */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-[#c7211a]" />
+                    <Target className="w-6 h-6 text-[#78912b]" />
                     Focus
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -367,7 +367,7 @@ export function ProgramsSection() {
                 {/* Methodology */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <BookOpen className="w-6 h-6 text-[#c7211a]" />
+                    <BookOpen className="w-6 h-6 text-[#78912b]" />
                     Methodology
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -378,7 +378,7 @@ export function ProgramsSection() {
                 {/* Purpose */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="w-6 h-6 text-[#c7211a]" />
+                    <Lightbulb className="w-6 h-6 text-[#78912b]" />
                     Purpose
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -389,7 +389,7 @@ export function ProgramsSection() {
                 {/* Key Features */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-6 h-6 text-[#c7211a]" />
+                    <CheckCircle className="w-6 h-6 text-[#78912b]" />
                     Key Features
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3 pl-8">

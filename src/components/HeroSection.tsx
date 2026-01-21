@@ -39,7 +39,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             We Train, Mentor, Coach, and Prepare Boys for{' '}
             <span className="text-[#c7211a]">Leadership</span>,{' '}
-            <span className="text-[#c7211a]">Innovation</span>, and{' '}
+            <span className="text-[#78912b]">Innovation</span>, and{' '}
             <span className="text-[#c7211a]">Social Impact</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">

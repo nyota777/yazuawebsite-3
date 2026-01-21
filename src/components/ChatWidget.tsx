@@ -27,7 +27,7 @@ export function ChatWidget() {
             className="mb-4 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-[#c7211a] to-[#4e2b14] p-4 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-[#78912b] to-[#4e2b14] p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-white" />
@@ -49,7 +49,7 @@ export function ChatWidget() {
             <div className="h-80 p-4 bg-gray-50 overflow-y-auto">
               <div className="space-y-4">
                 <div className="flex gap-2">
-                  <div className="w-8 h-8 bg-[#c7211a] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 bg-[#78912b] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm font-semibold">YA</span>
                   </div>
                   <div className="bg-white rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[80%]">
@@ -59,13 +59,13 @@ export function ChatWidget() {
                   </div>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#c7211a] hover:text-[#c7211a] transition-colors">
+                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#78912b] hover:text-[#78912b] transition-colors">
                     Program Information
                   </button>
-                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#c7211a] hover:text-[#c7211a] transition-colors">
+                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#78912b] hover:text-[#78912b] transition-colors">
                     Registration
                   </button>
-                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#c7211a] hover:text-[#c7211a] transition-colors">
+                  <button className="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-700 hover:border-[#78912b] hover:text-[#78912b] transition-colors">
                     Schedule Visit
                   </button>
                 </div>
@@ -80,11 +80,11 @@ export function ChatWidget() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#c7211a] text-sm"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#78912b] text-sm"
                 />
                 <button
                   type="submit"
-                  className="bg-[#c7211a] text-white p-2 rounded-full hover:bg-[#4e2b14] transition-colors"
+                  className="bg-[#78912b] text-white p-2 rounded-full hover:bg-[#4e2b14] transition-colors"
                 >
                   <Send className="w-5 h-5" />
                 </button>
@@ -95,7 +95,7 @@ export function ChatWidget() {
                   href="https://wa.me/254734631650"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#c7211a] hover:underline"
+                  className="text-[#78912b] hover:underline"
                 >
                   WhatsApp
                 </a>
@@ -110,7 +110,7 @@ export function ChatWidget() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-gradient-to-r from-[#c7211a] to-[#4e2b14] rounded-full shadow-2xl flex items-center justify-center hover:shadow-[#c7211a]/50 transition-all duration-300"
+        className="w-16 h-16 bg-gradient-to-r from-[#78912b] to-[#4e2b14] rounded-full shadow-2xl flex items-center justify-center hover:shadow-[#78912b]/50 transition-all duration-300"
       >
         {isOpen ? (
           <X className="w-8 h-8 text-white" />
