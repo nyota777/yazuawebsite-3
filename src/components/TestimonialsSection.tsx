@@ -55,7 +55,7 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#006B3F]/5 to-[#FF6F3C]/5">
+    <section className="py-20 bg-gradient-to-br from-[#006B3F]/5 to-[#c7211a]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export function TestimonialsSection() {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative"
             >
-              <div className="absolute top-6 right-6 text-[#FF6F3C]/10">
+              <div className="absolute top-6 right-6 text-[#c7211a]/10">
                 <Quote className="w-16 h-16" />
               </div>
               <div className="relative z-10">
@@ -91,7 +91,7 @@ export function TestimonialsSection() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-[#FF6F3C] text-[#FF6F3C]"
+                      className="w-5 h-5 fill-[#c7211a] text-[#c7211a]"
                     />
                   ))}
                 </div>

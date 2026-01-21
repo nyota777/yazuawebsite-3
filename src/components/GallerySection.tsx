@@ -114,7 +114,7 @@ export function GallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm mb-2">
+                  <span className="inline-block bg-[#c7211a] text-white px-3 py-1 rounded-full text-sm mb-2">
                     {item.category}
                   </span>
                   <h3 className="text-white text-xl font-bold">{item.title}</h3>
@@ -122,7 +122,7 @@ export function GallerySection() {
               </div>
               {item.type === 'video' && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-[#c7211a] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
                 </div>
@@ -186,7 +186,7 @@ export function GallerySection() {
               </video>
               {!isVideoPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
-                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 pointer-events-auto">
+                  <div className="w-20 h-20 bg-[#c7211a] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 pointer-events-auto">
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
@@ -211,7 +211,7 @@ export function GallerySection() {
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white hover:text-orange-600 transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-[#c7211a] transition-colors"
             >
               <X className="w-8 h-8" />
             </button>

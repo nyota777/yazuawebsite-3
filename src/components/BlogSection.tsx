@@ -72,7 +72,7 @@ export function BlogSection() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center gap-2 ${
                 selectedCategory === category
-                  ? 'bg-orange-600 text-white shadow-lg'
+                  ? 'bg-[#c7211a] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -99,7 +99,7 @@ export function BlogSection() {
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-[#c7211a] text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {post.category}
                 </div>
               </div>
@@ -114,7 +114,7 @@ export function BlogSection() {
                     {post.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#c7211a] transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
@@ -125,7 +125,7 @@ export function BlogSection() {
                       href={post.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300"
+                      className="flex items-center gap-2 text-[#c7211a] font-semibold hover:gap-4 transition-all duration-300"
                     >
                       Read More <ArrowRight className="w-5 h-5" />
                     </a>
@@ -146,7 +146,7 @@ export function BlogSection() {
             href="https://substack.com/@ericmungai?utm_source=share&utm_medium=android&r=2uo5zv"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105"
           >
             Read More Articles
           </a>

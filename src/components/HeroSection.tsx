@@ -51,7 +51,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="#programs"
-              className="bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg"
+              className="bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg"
             >
               Join a Program <ArrowRight className="w-5 h-5" />
             </a>

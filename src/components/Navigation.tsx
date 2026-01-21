@@ -51,8 +51,8 @@ export function Navigation() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
-                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
+                    className={`text-gray-700 hover:text-[#c7211a] transition-colors duration-200 ${
+                      location.pathname === link.href ? 'text-[#c7211a] font-semibold' : ''
                     }`}
                   >
                     {link.name}
@@ -76,14 +76,14 @@ export function Navigation() {
                     key={link.name}
                     href={link.href}
                     onClick={handleHashClick}
-                    className="text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200"
+                    className="text-gray-700 hover:text-[#c7211a] transition-colors duration-200"
                   >
                     {link.name}
                   </a>
                 );
               }
             })}
-            <button className="bg-[#FF6F3C] text-white px-6 py-2 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
+            <button className="bg-[#c7211a] text-white px-6 py-2 rounded-full hover:bg-[#4e2b14] transition-colors duration-200">
               Donate
             </button>
           </div>

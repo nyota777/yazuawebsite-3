@@ -88,19 +88,19 @@ export function AboutPage() {
               </h2>
               <ul className="space-y-4 text-lg text-gray-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
+                  <span className="text-[#c7211a] font-bold mt-1">•</span>
                   <span>Mentorship and youth empowerment</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
+                  <span className="text-[#c7211a] font-bold mt-1">•</span>
                   <span>Education and skills development</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
+                  <span className="text-[#c7211a] font-bold mt-1">•</span>
                   <span>Community support and social impact initiatives</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
+                  <span className="text-[#c7211a] font-bold mt-1">•</span>
                   <span>Ethical partnerships and transparent engagement</span>
                 </li>
               </ul>
@@ -130,7 +130,7 @@ export function AboutPage() {
             </h3>
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-200 hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-red-200 hidden md:block"></div>
 
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
@@ -145,7 +145,7 @@ export function AboutPage() {
                   >
                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                       <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <div className="text-4xl font-bold text-orange-600 mb-2">
+                        <div className="text-4xl font-bold text-[#c7211a] mb-2">
                           {milestone.year}
                         </div>
                         <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -155,7 +155,7 @@ export function AboutPage() {
                       </div>
                     </div>
                     <div className="w-full md:w-2/12 flex justify-center my-4 md:my-0">
-                      <div className="w-6 h-6 bg-orange-600 rounded-full border-4 border-white shadow-lg"></div>
+                      <div className="w-6 h-6 bg-[#c7211a] rounded-full border-4 border-white shadow-lg"></div>
                     </div>
                     <div className="w-full md:w-5/12"></div>
                   </motion.div>

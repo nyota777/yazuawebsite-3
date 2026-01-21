@@ -212,7 +212,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                 className={cn(
                   'px-4 py-2 rounded-md transition-all duration-200 flex items-center gap-2',
                   viewMode === 'calendar'
-                    ? 'bg-white text-[#FF6F3C] shadow-sm font-semibold'
+                    ? 'bg-white text-[#c7211a] shadow-sm font-semibold'
                     : 'text-gray-600 hover:text-gray-900'
                 )}
               >
@@ -224,7 +224,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                 className={cn(
                   'px-4 py-2 rounded-md transition-all duration-200 flex items-center gap-2',
                   viewMode === 'list'
-                    ? 'bg-white text-[#FF6F3C] shadow-sm font-semibold'
+                    ? 'bg-white text-[#c7211a] shadow-sm font-semibold'
                     : 'text-gray-600 hover:text-gray-900'
                 )}
               >
@@ -272,7 +272,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                     row: 'flex w-full mt-2',
                     cell: cn(
                       'h-9 w-9 text-center text-sm p-0 relative',
-                      '[&:has([aria-selected])]:bg-orange-50',
+                      '[&:has([aria-selected])]:bg-red-50',
                       'first:[&:has([aria-selected])]:rounded-l-md',
                       'last:[&:has([aria-selected])]:rounded-r-md',
                       'focus-within:relative focus-within:z-20'
@@ -280,12 +280,12 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                     day: cn(
                       'h-9 w-9 p-0 font-normal rounded-md',
                       'hover:bg-gray-100',
-                      'aria-selected:bg-[#FF6F3C]',
+                      'aria-selected:bg-[#c7211a]',
                       'aria-selected:text-white',
-                      'aria-selected:hover:bg-[#e55a2a]',
-                      'focus:bg-[#FF6F3C] focus:text-white'
+                      'aria-selected:hover:bg-[#4e2b14]',
+                      'focus:bg-[#c7211a] focus:text-white'
                     ),
-                    day_today: 'bg-orange-100 text-gray-900 font-semibold',
+                    day_today: 'bg-red-100 text-gray-900 font-semibold',
                     day_outside: 'day-outside text-gray-400 opacity-50',
                     day_disabled: 'text-gray-300 opacity-50',
                     day_hidden: 'invisible',
@@ -294,7 +294,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                     hasEvent: (date) => eventDates.has(formatDateKey(date)),
                   }}
                   modifiersClassNames={{
-                    hasEvent: 'relative after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#FF6F3C] after:rounded-full',
+                    hasEvent: 'relative after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#c7211a] after:rounded-full',
                   }}
                 />
               </div>
@@ -372,13 +372,13 @@ function EventDetailCard({ event, registerUrl }: { event: Event; registerUrl: st
   };
 
   const categoryColors: Record<string, string> = {
-    Camp: 'bg-[#FF6F3C]',
+    Camp: 'bg-[#c7211a]',
     Workshop: 'bg-[#1A1A1A]',
     Coaching: 'bg-[#8B7355]',
-    'Info Session': 'bg-[#FF6F3C]',
-    'Information Session': 'bg-[#FF6F3C]',
+    'Info Session': 'bg-[#c7211a]',
+    'Information Session': 'bg-[#c7211a]',
     'Outdoor Adventure': 'bg-[#006B3F]',
-    Program: 'bg-[#FF6F3C]',
+    Program: 'bg-[#c7211a]',
     'Community Event': 'bg-[#006B3F]',
   };
 
@@ -399,24 +399,24 @@ function EventDetailCard({ event, registerUrl }: { event: Event; registerUrl: st
       <h4 className="text-lg font-bold text-gray-900 mb-3">{event.title}</h4>
       <div className="space-y-2 mb-4">
         <div className="flex items-start gap-2 text-sm text-gray-600">
-          <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+          <CalendarIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
           <span>{getDateLabel()}</span>
         </div>
         {event.time && (
           <div className="flex items-start gap-2 text-sm text-gray-600">
-            <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+            <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
             <span>{event.time}</span>
           </div>
         )}
         {event.location && (
           <div className="flex items-start gap-2 text-sm text-gray-600">
-            <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+            <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
             <span>{event.location}</span>
           </div>
         )}
         {typeof event.slotsRemaining === 'number' && (
           <div className="flex items-start gap-2 text-sm text-gray-600">
-            <Users className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#FF6F3C]" />
+            <Users className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#c7211a]" />
             <span>
               Slots remaining: <span className="font-semibold">{event.slotsRemaining}</span>
               {typeof event.slotsTotal === 'number' ? ` / ${event.slotsTotal}` : ''}
@@ -429,7 +429,7 @@ function EventDetailCard({ event, registerUrl }: { event: Event; registerUrl: st
           href={registerUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 bg-[#FF6F3C] text-white px-4 py-2 rounded-full hover:bg-[#e55a2a] transition-all duration-300 flex items-center justify-center gap-2 font-semibold text-sm"
+          className="flex-1 bg-[#c7211a] text-white px-4 py-2 rounded-full hover:bg-[#4e2b14] transition-all duration-300 flex items-center justify-center gap-2 font-semibold text-sm"
         >
           Register Now <ArrowRight className="w-4 h-4" />
         </a>

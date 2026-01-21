@@ -204,7 +204,7 @@ export function ProgramsSection() {
               onClick={() => setActiveFilter(filter)}
               className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeFilter === filter
-                  ? 'bg-orange-600 text-white shadow-lg'
+                  ? 'bg-[#c7211a] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -231,16 +231,16 @@ export function ProgramsSection() {
                   alt={program.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-[#c7211a] text-white px-4 py-2 rounded-full text-sm font-semibold">
                   {program.duration}
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   {React.createElement(program.icon, {
-                    className: 'w-8 h-8 text-orange-600',
+                    className: 'w-8 h-8 text-[#c7211a]',
                   })}
-                  <span className="text-sm text-orange-600 font-semibold uppercase tracking-wide">
+                  <span className="text-sm text-[#c7211a] font-semibold uppercase tracking-wide">
                     {program.category}
                   </span>
                 </div>
@@ -254,7 +254,7 @@ export function ProgramsSection() {
                       href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 bg-[#FF6F3C] text-white px-6 py-3 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 font-semibold"
+                      className="flex items-center justify-center gap-2 bg-[#c7211a] text-white px-6 py-3 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 font-semibold"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Register Now <ArrowRight className="w-5 h-5" />
@@ -268,7 +268,7 @@ export function ProgramsSection() {
                     >
                       Book Now <ArrowRight className="w-5 h-5" />
                     </a>
-                    <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
+                    <button className="flex items-center gap-2 text-[#c7211a] font-semibold hover:gap-4 transition-all duration-300">
                       Learn More <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
@@ -319,9 +319,9 @@ export function ProgramsSection() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-center gap-3 mb-3">
                     {React.createElement(selectedProgram.icon, {
-                      className: 'w-10 h-10 text-[#FF6F3C]',
+                      className: 'w-10 h-10 text-[#c7211a]',
                     })}
-                    <span className="text-sm text-white font-semibold uppercase tracking-wide bg-[#FF6F3C] px-3 py-1 rounded-full">
+                    <span className="text-sm text-white font-semibold uppercase tracking-wide bg-[#c7211a] px-3 py-1 rounded-full">
                       {selectedProgram.category}
                     </span>
                   </div>
@@ -339,12 +339,12 @@ export function ProgramsSection() {
               <div className="p-6 md:p-8">
                 {/* Pricing */}
                 {selectedProgram.pricing && (
-                  <div className="mb-8 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200">
+                  <div className="mb-8 bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-6 border-2 border-red-200">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                      <DollarSign className="w-6 h-6 text-[#FF6F3C]" />
+                      <DollarSign className="w-6 h-6 text-[#c7211a]" />
                       Pricing
                     </h3>
-                    <p className="text-2xl font-bold text-[#FF6F3C]">
+                    <p className="text-2xl font-bold text-[#c7211a]">
                       {selectedProgram.pricing}
                     </p>
                   </div>
@@ -356,7 +356,7 @@ export function ProgramsSection() {
                 {/* Focus */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-[#FF6F3C]" />
+                    <Target className="w-6 h-6 text-[#c7211a]" />
                     Focus
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -367,7 +367,7 @@ export function ProgramsSection() {
                 {/* Methodology */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <BookOpen className="w-6 h-6 text-[#FF6F3C]" />
+                    <BookOpen className="w-6 h-6 text-[#c7211a]" />
                     Methodology
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -378,7 +378,7 @@ export function ProgramsSection() {
                 {/* Purpose */}
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="w-6 h-6 text-[#FF6F3C]" />
+                    <Lightbulb className="w-6 h-6 text-[#c7211a]" />
                     Purpose
                   </h3>
                   <p className="text-gray-700 leading-relaxed pl-8">
@@ -389,7 +389,7 @@ export function ProgramsSection() {
                 {/* Key Features */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-6 h-6 text-[#FF6F3C]" />
+                    <CheckCircle className="w-6 h-6 text-[#c7211a]" />
                     Key Features
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3 pl-8">
@@ -410,7 +410,7 @@ export function ProgramsSection() {
                         href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
+                        className="flex-1 bg-[#c7211a] text-white px-8 py-4 rounded-full hover:bg-[#4e2b14] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
                       >
                         Register Now
                         <ArrowRight className="w-5 h-5" />
