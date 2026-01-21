@@ -32,7 +32,7 @@ export function ContactSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get in <span className="text-orange-600">Touch</span>
+            Get in <span className="text-[#c7211a]">Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Ready to start your leadership journey? Contact us today to learn more about

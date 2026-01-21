@@ -192,7 +192,7 @@ export function EventCalendar() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Upcoming <span className="text-[#FF6F3C]">Events</span>
+            Upcoming <span className="text-[#c7211a]">Events</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Join us for workshops, camps, and leadership programs designed to empower and

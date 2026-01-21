@@ -45,7 +45,7 @@ export function ImpactMetrics() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-[#FF6F3C]">Impact</span>
+            Our <span className="text-[#c7211a]">Impact</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Measurable results that demonstrate our commitment to transforming lives and

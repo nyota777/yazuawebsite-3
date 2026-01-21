@@ -165,7 +165,7 @@ export function ProgramsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-orange-600">Programs</span>
+            Our <span className="text-[#c7211a]">Programs</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover our comprehensive programs designed to transform boys into confident,

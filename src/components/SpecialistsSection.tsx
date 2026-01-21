@@ -22,7 +22,7 @@ export function SpecialistsSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            Our <span className="text-[#FF6F3C]">Specialties</span>
+            Our <span className="text-[#c7211a]">Specialties</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((specialty, index) => (

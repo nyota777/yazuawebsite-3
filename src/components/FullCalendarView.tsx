@@ -202,7 +202,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Full <span className="text-[#FF6F3C]">Calendar</span>
+            Full <span className="text-[#c7211a]">Calendar</span>
           </h2>
           <div className="flex items-center gap-4">
             {/* View Toggle */}

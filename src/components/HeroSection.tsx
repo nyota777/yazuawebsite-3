@@ -38,9 +38,9 @@ export function HeroSection() {
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             We Train, Mentor, Coach, and Prepare Boys for{' '}
-            <span className="text-[#FF6F3C]">Leadership</span>,{' '}
-            <span className="text-[#FF6F3C]">Innovation</span>, and{' '}
-            <span className="text-[#FF6F3C]">Social Impact</span>
+            <span className="text-[#c7211a]">Leadership</span>,{' '}
+            <span className="text-[#c7211a]">Innovation</span>, and{' '}
+            <span className="text-[#c7211a]">Social Impact</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Empowering young men through experiential learning, mentorship programs,
@@ -73,7 +73,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-6"
           >
             {React.createElement(stats[currentStat].icon, {
-              className: 'w-8 h-8 text-[#FF6F3C]',
+              className: 'w-8 h-8 text-[#c7211a]',
             })}
             <div className="text-left">
               <div className="text-3xl font-bold text-white">

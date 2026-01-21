@@ -58,7 +58,7 @@ export function AboutPage() {
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              About <span className="text-[#FF6F3C]">Yazua Afrika</span>
+              About <span className="text-[#c7211a]">Yazua Afrika</span>
             </h1>
           </motion.div>
 

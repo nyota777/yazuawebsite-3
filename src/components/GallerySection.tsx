@@ -87,7 +87,7 @@ export function GallerySection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-orange-600">Gallery</span>
+            Our <span className="text-[#c7211a]">Gallery</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore moments from our programs, camps, and workshops that showcase the

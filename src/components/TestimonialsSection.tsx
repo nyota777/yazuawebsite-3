@@ -65,7 +65,7 @@ export function TestimonialsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Success <span className="text-[#FF6F3C]">Stories</span>
+            Success <span className="text-[#c7211a]">Stories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from participants, parents, and community members about the transformative
