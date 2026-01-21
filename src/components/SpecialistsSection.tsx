@@ -5,13 +5,11 @@ import { motion } from 'motion/react';
 export function SpecialistsSection() {
   const specialties = [
     { icon: Target, label: 'Leadership Development' },
-    { icon: Users, label: 'Boys\' Development' },
+    { icon: Users, label: 'Boys Development and Mentorship' },
     { icon: Brain, label: 'Masculinity Expertise' },
-    { icon: Mountain, label: 'Experiential Learning' },
+    { icon: Mountain, label: 'Experiential Learning and Coaching' },
     { icon: Award, label: 'Rites of Passage' },
     { icon: BookOpen, label: 'Research, Curriculum Development and Program Design' },
-    { icon: Users, label: 'Mentorship' },
-    { icon: Heart, label: 'Coaching' },
   ];
 
   return (
