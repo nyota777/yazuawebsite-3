@@ -58,7 +58,7 @@ export function CTABanner() {
                   <button className="bg-white text-[#FF6F3C] px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold whitespace-nowrap">
                     Apply Now <ArrowRight className="w-5 h-5" />
                   </button>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#78912b] transition-all duration-300 font-semibold whitespace-nowrap">
+                  <button className="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#FF6F3C] transition-all duration-300 font-semibold whitespace-nowrap">
                     Donate
                   </button>
                 </div>

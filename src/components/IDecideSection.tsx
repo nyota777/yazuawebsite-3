@@ -231,8 +231,8 @@ export function IDecideSection() {
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Lightbulb className="w-6 h-6 text-[#78912b]" />
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Lightbulb className="w-6 h-6 text-orange-600" />
             </div>
             <h4 className="font-bold text-gray-900 mb-2">Real Impact</h4>
             <p className="text-sm text-gray-600">

@@ -73,7 +73,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-6"
           >
             {React.createElement(stats[currentStat].icon, {
-              className: 'w-8 h-8 text-[#c7211a]',
+              className: 'w-8 h-8 text-[#FF6F3C]',
             })}
             <div className="text-left">
               <div className="text-3xl font-bold text-white">

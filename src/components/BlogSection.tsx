@@ -56,7 +56,7 @@ export function BlogSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Insights & <span className="text-[#c7211a]">Stories</span>
+            Insights & <span className="text-orange-600">Stories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Read the latest stories, tips, and updates about leadership development,

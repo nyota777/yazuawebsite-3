@@ -1,8 +1,10 @@
-import React from 'react';
-import { Quote, Star } from 'lucide-react';
-import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function TestimonialsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const testimonials = [
     {
       name: 'David Kamau',
@@ -54,8 +56,28 @@ export function TestimonialsSection() {
     },
   ];
 
+  const nextTestimonial = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (currentIndex < testimonials.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    }
+  };
+
+  const prevTestimonial = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
+
+  const currentTestimonial = testimonials[currentIndex];
+  const isFirst = currentIndex === 0;
+  const isLast = currentIndex === testimonials.length - 1;
+
   return (
-    <section className="py-20 bg-gradient-to-br from-[#006B3F]/5 to-[#FF6F3C]/5">
+    <section className="py-20 bg-gradient-to-br from-[#006B3F]/5 to-[#FF6F3C]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,47 +95,92 @@ export function TestimonialsSection() {
           </p>
         </motion.div>
 
-        <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide" style={{ scrollBehavior: 'smooth' }}>
-          <div className="flex gap-6 min-w-max sm:min-w-0">
-            {testimonials.map((testimonial, index) => (
+        <div className="relative max-w-4xl mx-auto px-14 md:px-20">
+          <div className="relative">
+            <AnimatePresence mode="wait">
               <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative flex-shrink-0 w-[90vw] sm:w-[400px] md:w-[450px]"
+                key={currentIndex}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="bg-white rounded-2xl shadow-lg p-8 md:p-10 relative w-full"
               >
                 <div className="absolute top-6 right-6 text-[#FF6F3C]/10">
                   <Quote className="w-16 h-16" />
                 </div>
                 <div className="relative z-10">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(currentTestimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 fill-[#FF6F3C] text-[#FF6F3C]"
                       />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 italic leading-relaxed">
-                    "{testimonial.quote}"
+                  <p className="text-gray-700 mb-6 italic leading-relaxed text-lg">
+                    "{currentTestimonial.quote}"
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
+                        src={currentTestimonial.image}
+                        alt={currentTestimonial.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                      <h4 className="font-semibold text-gray-900">{currentTestimonial.name}</h4>
+                      <p className="text-sm text-gray-600">{currentTestimonial.role}</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevTestimonial}
+              disabled={isFirst}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                isFirst
+                  ? 'opacity-40 cursor-not-allowed text-gray-400'
+                  : 'hover:shadow-xl hover:bg-[#FF6F3C] hover:text-white text-[#FF6F3C] cursor-pointer'
+              }`}
+              aria-label="Previous testimonial"
+              type="button"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              disabled={isLast}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                isLast
+                  ? 'opacity-40 cursor-not-allowed text-gray-400'
+                  : 'hover:shadow-xl hover:bg-[#FF6F3C] hover:text-white text-[#FF6F3C] cursor-pointer'
+              }`}
+              aria-label="Next testimonial"
+              type="button"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ease-in-out ${
+                  index === currentIndex
+                    ? 'bg-[#FF6F3C] w-8'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+                type="button"
+              />
             ))}
           </div>
         </div>

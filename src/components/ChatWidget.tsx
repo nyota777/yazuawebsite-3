@@ -110,7 +110,7 @@ export function ChatWidget() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-gradient-to-r from-[#78912b] to-[#4e2b14] rounded-full shadow-2xl flex items-center justify-center hover:shadow-[#78912b]/50 transition-all duration-300"
+        className="w-16 h-16 bg-gradient-to-r from-orange-600 to-orange-700 rounded-full shadow-2xl flex items-center justify-center hover:shadow-orange-600/50 transition-all duration-300"
       >
         {isOpen ? (
           <X className="w-8 h-8 text-white" />

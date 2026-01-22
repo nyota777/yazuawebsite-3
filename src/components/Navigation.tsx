@@ -83,7 +83,7 @@ export function Navigation() {
                 );
               }
             })}
-            <button className="bg-[#78912b] text-white px-6 py-2 rounded-full hover:bg-[#4e2b14] transition-colors duration-200">
+            <button className="bg-[#FF6F3C] text-white px-6 py-2 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
               Donate
             </button>
           </div>

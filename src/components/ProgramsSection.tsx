@@ -35,46 +35,54 @@ export function ProgramsSection() {
     {
       name: 'FORGE (Ages 12-14)',
       category: 'Rites of Passage',
-      description: 'A flagship 6-month program using physically challenging activities like obstacle courses and rock climbing to build grit, leadership, and identity through Rites of Passage.',
+      description: 'Our flagship Rites of Passage program; run over 6-months of mentorship, coaching and development, with a 14-day Rites camp that involves mentorship sessions, adventure activities, obstacle courses and rock climbing to build grit, leadership, and identity through experiential learning.',
       icon: Target,
       image: `${import.meta.env.BASE_URL}forge_logo.png`,
       duration: '6 months',
       ageGroup: '12-14 years',
       pricing: 'Kes. 128,500',
       detailedInfo: {
-        focus: 'A 6-month flagship leadership program centered on identity and positive masculinity.',
-        methodology: 'It utilizes physically challenging activities, such as obstacle courses and rock climbing, to build "grit".',
-        purpose: 'The program aims to initiate a mind-shift regarding entrepreneurial leadership and prepares boys for the "Rites of Passage" by helping them understand their role as men in society.',
+        focus: 'Our flagship Rites of Passage program; run over 6-months of mentorship, coaching and development, with a 14-day Rites camp.',
+        methodology: 'The program involves mentorship sessions, adventure activities, obstacle courses and rock climbing to build grit, leadership, and identity through experiential learning.',
+        purpose: 'The program aims to build grit, leadership, and identity through experiential learning, preparing boys for their Rites of Passage by helping them understand their role as men in society through physically challenging activities and sustained mentorship.',
         keyFeatures: [
+          '6-month mentorship and coaching program',
+          '14-day intensive Rites camp',
+          'Mentorship sessions',
+          'Adventure activities',
           'Physically challenging obstacle courses',
-          'Rock climbing and outdoor adventures',
-          'Identity formation workshops',
-          'Positive masculinity coaching',
-          'Rites of Passage preparation',
-          'Entrepreneurial leadership mindset'
+          'Rock climbing',
+          'Identity formation through experiential learning',
+          'Leadership development',
+          'Grit building exercises',
+          'Rites of Passage preparation'
         ]
       }
     },
     {
       name: 'IDECIDE (AGES 13-15) BOYS MENTORSHIP MODEL',
       category: 'Project-Based Learning',
-      description: 'A 6-month intensive life coaching model combining online and outdoor activities, emphasizing decision-making skills, mission-setting, and personal development.',
+      description: 'A 4-month intensive life coaching model combining online and outdoor activities, emphasising decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
       image: `${import.meta.env.BASE_URL}iDECIDE-logo.jpeg`,
-      duration: '6 months',
+      duration: '4 months',
       ageGroup: '13-17 years',
       pricing: 'Kes. 28,800',
       detailedInfo: {
-        focus: 'A 6-month intensive life coaching model consisting of eight interactive sessions.',
-        methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress.',
-        purpose: 'It empowers young men to define their life mission, set goals, and develop the capacity to make decisions that positively impact their community.',
+        focus: 'A 4-month intensive life coaching model combining online and outdoor activities.',
+        methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress, emphasising decision-making skills, mission-setting, and personal development.',
+        purpose: 'It empowers young men to define their life mission, set goals, and develop the capacity to make decisions that positively impact their community through intensive life coaching and personal development.',
         keyFeatures: [
-          'Eight interactive coaching sessions',
+          '4-month intensive life coaching program',
+          'Online and outdoor activities',
+          'Decision-making skills development',
+          'Mission-setting workshops',
+          'Personal development focus',
           'iDECIDE Journal for self-reflection',
           '20/20 Vision year planner',
-          'Online and outdoor activities',
           'Life mission definition',
-          'Goal setting and decision-making skills'
+          'Goal setting and achievement',
+          'Interactive coaching sessions'
         ]
       }
     },
