@@ -1,13 +1,30 @@
-import React, { useState } from 'react';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-import { motion } from 'motion/react';
+import React, { useState, useEffect } from 'react';
+import { Calendar, User, ArrowRight, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function BlogSection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const categories = ['All', 'Leadership', 'Youth Development', 'Success Stories', 'Program Updates'];
 
   const blogPosts = [
+    {
+      title: 'THE FIRE 🔥',
+      excerpt: 'Masculinity is not a destination—it is a process. Like raw iron in the hands of a blacksmith, a man is shaped by fire, struck by the hammer of experience, and cooled in the waters of reflection. The question is never if we will be FORGED, but by WHO & HOW. For too long, masculinity has been framed as something rigid, something inherited rather than cultivated. But true strength is not found in resistance—it is found in discipline, adaptability, and purpose. A man is MADE, not born.',
+      fullContent: {
+        theFire: 'Masculinity is not a destination—it is a process. Like raw iron in the hands of a blacksmith, a man is shaped by fire, struck by the hammer of experience, and cooled in the waters of reflection. The question is never if we will be FORGED, but by WHO & HOW. For too long, masculinity has been framed as something rigid, something inherited rather than cultivated. But true strength is not found in resistance—it is found in discipline, adaptability, and purpose. A man is MADE, not born.',
+        theHammer: 'What—or who—has shaped your understanding of masculinity the most? Was it the silent lessons of a father figure? The demands of responsibility? The fire of failure? Or the quiet defiance of choosing your own path? And here\'s the real question: Is your current definition of masculinity serving you—or are you serving it? Too often, we live within definitions that no longer fit us, bound by expectations that do not build us. The true test of manhood is not how well we conform, but how boldly we refine and redefine what strength, leadership, and integrity mean for us today.',
+        theForge: 'Engage: Growth is never a solo journey. Find a friend, a mentor, or a group and have a real conversation about this. Let\'s sharpen each other. Share: If this resonated with you, pass it along to a brother, a father, a son—someone who is walking their own journey of manhood. Create a #space to talk and share your ideas and thoughts. Reflect: Take five minutes today to journal or voice-record your thoughts: What version of masculinity am I FORGING? What do I need to let go of, and what do I need to embrace?',
+        theEdge: 'This week, pay attention to the moments that shape you. Not the big, dramatic turning points—but the small, unnoticed choices. How you respond to stress. How you carry your burdens. How you hold yourself accountable. A man is not made in the grand gestures but in the unseen discipline of daily living. Every day is a chance to #FORGE yourself. The fire is waiting. Step into it. Until the next FORGED FRIDAY, Eric'
+      },
+      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      category: 'Leadership',
+      author: 'Eric Mungai',
+      date: 'Feb 21, 2025',
+      readTime: '8 min read',
+      link: 'https://open.substack.com/pub/ericmungai/p/raising-men-who-wont-crumble-775?r=5jvuu9&utm_campaign=post&utm_medium=web',
+    },
     {
       title: 'THE FIRE',
       excerpt: 'We often speak of missing boys when they\'ve run away, dropped out, or disappeared from school or society altogether. But some boys begin to disappear long before they leave. They vanish in plain sight, silent in the classroom, withdrawn at the dinner table, performing masculinity like a soldier reciting commands he does not believe in. Their minds are loud, but their voices have gone quiet. Their hearts ache, but their faces remain blank. Their names are on the roll call, but they are not seen.',
@@ -45,8 +62,52 @@ export function BlogSection() {
       ? blogPosts
       : blogPosts.filter((post) => post.category === selectedCategory);
 
+  // Calculate cards per view based on screen size
+  const getCardsPerView = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1024) return 3; // lg: 3 cards
+      if (window.innerWidth >= 768) return 2; // md: 2 cards
+      return 1; // mobile: 1 card
+    }
+    return 1;
+  };
+
+  const [cardsPerView, setCardsPerView] = useState(getCardsPerView());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerView(getCardsPerView());
+      // Reset to first page when resizing
+      setCurrentIndex(0);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, filteredPosts.length - cardsPerView);
+  const isFirst = currentIndex === 0;
+  const isLast = currentIndex >= maxIndex;
+
+  const nextPosts = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isLast) {
+      setCurrentIndex((prev) => Math.min(prev + cardsPerView, maxIndex));
+    }
+  };
+
+  const prevPosts = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isFirst) {
+      setCurrentIndex((prev) => Math.max(prev - cardsPerView, 0));
+    }
+  };
+
+  const visiblePosts = filteredPosts.slice(currentIndex, currentIndex + cardsPerView);
+
   return (
-    <section id="blog" className="py-20 bg-white">
+    <section id="blog" className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +130,10 @@ export function BlogSection() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => {
+                setSelectedCategory(category);
+                setCurrentIndex(0); // Reset to first page when filter changes
+              }}
               className={`px-6 py-2 rounded-full transition-all duration-300 flex items-center gap-2 ${
                 selectedCategory === category
                   ? 'bg-orange-600 text-white shadow-lg'
@@ -82,62 +146,131 @@ export function BlogSection() {
           ))}
         </div>
 
-        {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map((post, index) => (
-            <motion.article
-              key={post.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  {post.category}
-                </div>
+        {/* Blog Carousel */}
+        <div className="relative max-w-7xl mx-auto px-12 md:px-16">
+          <div className="relative overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${currentIndex}-${selectedCategory}`}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              >
+                {visiblePosts.map((post, index) => (
+                  <motion.article
+                    key={post.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                  >
+                    <div className="relative h-56 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {post.category}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                        <span className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          {post.author}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          {post.date}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500">{post.readTime}</span>
+                        {post.link ? (
+                          <a 
+                            href={post.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Read More <ArrowRight className="w-5 h-5" />
+                          </a>
+                        ) : (
+                          <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
+                            Read More <ArrowRight className="w-5 h-5" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </motion.article>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation Arrows */}
+            {filteredPosts.length > cardsPerView && (
+              <>
+                <button
+                  onClick={prevPosts}
+                  disabled={isFirst}
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                    isFirst
+                      ? 'opacity-40 cursor-not-allowed text-gray-400'
+                      : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
+                  }`}
+                  aria-label="Previous posts"
+                  type="button"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextPosts}
+                  disabled={isLast}
+                  className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                    isLast
+                      ? 'opacity-40 cursor-not-allowed text-gray-400'
+                      : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
+                  }`}
+                  aria-label="Next posts"
+                  type="button"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )}
+
+            {/* Dot Indicators */}
+            {filteredPosts.length > cardsPerView && (
+              <div className="flex justify-center gap-2 mt-8">
+                {Array.from({ length: Math.ceil(filteredPosts.length / cardsPerView) }).map((_, index) => {
+                  const pageIndex = index * cardsPerView;
+                  const isActive = currentIndex === pageIndex || 
+                    (currentIndex > pageIndex && currentIndex < pageIndex + cardsPerView);
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(pageIndex)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ease-in-out ${
+                        isActive
+                          ? 'bg-orange-600 w-8'
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Go to page ${index + 1}`}
+                      type="button"
+                    />
+                  );
+                })}
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                  <span className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
-                    {post.author}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {post.date}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{post.readTime}</span>
-                  {post.link ? (
-                    <a 
-                      href={post.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300"
-                    >
-                      Read More <ArrowRight className="w-5 h-5" />
-                    </a>
-                  ) : (
-                    <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
-                      Read More <ArrowRight className="w-5 h-5" />
-                    </button>
-                  )}
-                </div>
-              </div>
-            </motion.article>
-          ))}
+            )}
+          </div>
         </div>
 
         {/* Load More Button */}
