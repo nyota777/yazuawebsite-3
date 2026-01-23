@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calendar, User, ArrowRight, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -62,29 +62,7 @@ export function BlogSection() {
       ? blogPosts
       : blogPosts.filter((post) => post.category === selectedCategory);
 
-  // Calculate cards per view based on screen size
-  const getCardsPerView = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth >= 1024) return 3; // lg: 3 cards
-      if (window.innerWidth >= 768) return 2; // md: 2 cards
-      return 1; // mobile: 1 card
-    }
-    return 1;
-  };
-
-  const [cardsPerView, setCardsPerView] = useState(getCardsPerView());
-
-  useEffect(() => {
-    const handleResize = () => {
-      setCardsPerView(getCardsPerView());
-      // Reset to first page when resizing
-      setCurrentIndex(0);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const maxIndex = Math.max(0, filteredPosts.length - cardsPerView);
+  const maxIndex = filteredPosts.length - 1;
   const isFirst = currentIndex === 0;
   const isLast = currentIndex >= maxIndex;
 
@@ -92,7 +70,7 @@ export function BlogSection() {
     e.preventDefault();
     e.stopPropagation();
     if (!isLast) {
-      setCurrentIndex((prev) => Math.min(prev + cardsPerView, maxIndex));
+      setCurrentIndex((prev) => prev + 1);
     }
   };
 
@@ -100,11 +78,11 @@ export function BlogSection() {
     e.preventDefault();
     e.stopPropagation();
     if (!isFirst) {
-      setCurrentIndex((prev) => Math.max(prev - cardsPerView, 0));
+      setCurrentIndex((prev) => prev - 1);
     }
   };
 
-  const visiblePosts = filteredPosts.slice(currentIndex, currentIndex + cardsPerView);
+  const visiblePosts = filteredPosts.slice(currentIndex, currentIndex + 1);
 
   return (
     <section id="blog" className="py-20 bg-white overflow-hidden">
@@ -156,15 +134,15 @@ export function BlogSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                className="flex justify-center"
               >
-                {visiblePosts.map((post, index) => (
+                {visiblePosts.map((post) => (
                   <motion.article
                     key={post.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                    transition={{ duration: 0.3 }}
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group w-full max-w-2xl"
                   >
                     <div className="relative h-56 overflow-hidden">
                       <img
@@ -216,7 +194,7 @@ export function BlogSection() {
             </AnimatePresence>
 
             {/* Navigation Arrows */}
-            {filteredPosts.length > cardsPerView && (
+            {filteredPosts.length > 1 && (
               <>
                 <button
                   onClick={prevPosts}
@@ -226,7 +204,7 @@ export function BlogSection() {
                       ? 'opacity-40 cursor-not-allowed text-gray-400'
                       : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
                   }`}
-                  aria-label="Previous posts"
+                  aria-label="Previous post"
                   type="button"
                 >
                   <ChevronLeft className="w-6 h-6" />
@@ -239,7 +217,7 @@ export function BlogSection() {
                       ? 'opacity-40 cursor-not-allowed text-gray-400'
                       : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
                   }`}
-                  aria-label="Next posts"
+                  aria-label="Next post"
                   type="button"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -248,26 +226,21 @@ export function BlogSection() {
             )}
 
             {/* Dot Indicators */}
-            {filteredPosts.length > cardsPerView && (
+            {filteredPosts.length > 1 && (
               <div className="flex justify-center gap-2 mt-8">
-                {Array.from({ length: Math.ceil(filteredPosts.length / cardsPerView) }).map((_, index) => {
-                  const pageIndex = index * cardsPerView;
-                  const isActive = currentIndex === pageIndex || 
-                    (currentIndex > pageIndex && currentIndex < pageIndex + cardsPerView);
-                  return (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentIndex(pageIndex)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ease-in-out ${
-                        isActive
-                          ? 'bg-orange-600 w-8'
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      aria-label={`Go to page ${index + 1}`}
-                      type="button"
-                    />
-                  );
-                })}
+                {filteredPosts.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ease-in-out ${
+                      index === currentIndex
+                        ? 'bg-orange-600 w-8'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Go to post ${index + 1}`}
+                    type="button"
+                  />
+                ))}
               </div>
             )}
           </div>
