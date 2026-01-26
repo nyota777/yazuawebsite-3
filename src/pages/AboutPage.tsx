@@ -154,9 +154,6 @@ export function AboutPage() {
               Our Journey
             </h3>
             <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-200 hidden md:block"></div>
-
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
                   <motion.div
