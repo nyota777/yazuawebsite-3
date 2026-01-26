@@ -49,8 +49,8 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="flex justify-center mb-6 px-4">
-              <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl">
+            <div className="flex justify-center mb-6 px-8 py-4">
+              <div className="relative inline-block max-w-md md:max-w-lg lg:max-w-2xl">
                 <img 
                   src={`${import.meta.env.BASE_URL}yazua_logo2.png`} 
                   alt="YAZUA AFRIKA Logo" 
@@ -58,7 +58,8 @@ export function AboutPage() {
                   style={{ 
                     backgroundColor: 'transparent',
                     display: 'block',
-                    margin: '0 auto'
+                    maxWidth: '100%',
+                    height: 'auto'
                   }}
                 />
               </div>
@@ -154,6 +155,9 @@ export function AboutPage() {
               Our Journey
             </h3>
             <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-200 hidden md:block"></div>
+
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
                   <motion.div
