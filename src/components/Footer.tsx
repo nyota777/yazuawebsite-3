@@ -1,7 +1,27 @@
 import React from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, BookOpen } from 'lucide-react';
 
 export function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHashLink = (hash: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
   return (
     <footer className="bg-gray-950 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -72,34 +92,46 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="hover:text-[#FF6F3C] transition-colors">
+                <Link to="/" className="hover:text-[#FF6F3C] transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#FF6F3C] transition-colors">
+                <Link to="/about" className="hover:text-[#FF6F3C] transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   Programs
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#gallery')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   Gallery
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#blog" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#blog')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   Blog
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#contact')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -109,34 +141,52 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Programs</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   FORGE (Ages 12-14)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   BUILD (Ages 18-24)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   iDECIDE (Ages 13-15)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   MAN UP LEADERSHIP ADVENTURES
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   MENTORSHIP CIRCLE
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#programs" className="hover:text-[#FF6F3C] transition-colors">
+                <button
+                  onClick={() => handleHashLink('#programs')}
+                  className="hover:text-[#FF6F3C] transition-colors text-left"
+                >
                   X GLOBAL SUMMER EXPERIENCES
-                </a>
+                </button>
               </li>
             </ul>
           </div>
