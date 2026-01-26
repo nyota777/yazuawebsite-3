@@ -29,9 +29,9 @@ export function AboutSection() {
       description: 'Developed a puzzle and card game for mentoring boys on leadership and entrepreneurship within the continent of Africa.' 
     },
     { 
-      year: '2022', 
-      title: 'Continental Expansion & National Strategy Development', 
-      description: 'Secured strategic partnerships with 5 boys high schools across Kenya, establishing our mentorship programs as a cornerstone of youth development. Expanded our reach with implementation and presence in 5 African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo. Developed the National Male Engagement Strategy for Kenya, positioning YAZUA AFRIKA as a key player in shaping the future of boys\' mentorship at a national level.' 
+      year: '2022 – Present', 
+      title: 'Continental Expansion, National Strategy & Program Architecture', 
+      description: 'Yazua Afrika entered a new phase of continental growth and institutional influence. We secured strategic mentorship partnerships with leading boys\' secondary schools across Kenya, embedding our mentorship and leadership frameworks as foundational pillars within their student development ecosystems. Simultaneously, Yazua Afrika expanded its implementation footprint across five African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo, extending our model of relational mentorship, rites of passage, and leadership formation to diverse cultural and educational contexts. Beyond implementation, Yazua Afrika became a key contributor to the development of Kenya\'s National Male Engagement Strategy, positioning the organization as a national thought partner in shaping policy, practice, and long-term approaches to boys\' and young men\'s development. During this period, we also significantly strengthened our intellectual and program architecture, designing and refining proprietary curricula, leadership frameworks, mentorship methodologies, and flagship programs. This work ensured that Yazua Afrika\'s approach moved beyond isolated interventions toward a scalable, research-informed system for the holistic formation of boys and young men.' 
     },
   ];
 

@@ -32,9 +32,9 @@ export function AboutPage() {
       description: 'Developed a puzzle and card game for mentoring boys on leadership and entrepreneurship within the continent of Africa.' 
     },
     { 
-      year: '2022', 
-      title: 'Continental Expansion & National Strategy Development', 
-      description: 'Secured strategic partnerships with 5 boys high schools across Kenya, establishing our mentorship programs as a cornerstone of youth development. Expanded our reach with implementation and presence in 5 African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo. Developed the National Male Engagement Strategy for Kenya, positioning YAZUA AFRIKA as a key player in shaping the future of boys\' mentorship at a national level.' 
+      year: '2022 – Present', 
+      title: 'Continental Expansion, National Strategy & Program Architecture', 
+      description: 'Yazua Afrika entered a new phase of continental growth and institutional influence. We secured strategic mentorship partnerships with leading boys\' secondary schools across Kenya, embedding our mentorship and leadership frameworks as foundational pillars within their student development ecosystems. Simultaneously, Yazua Afrika expanded its implementation footprint across five African countries: Kenya, South Africa, Rwanda, Botswana, and the Democratic Republic of Congo, extending our model of relational mentorship, rites of passage, and leadership formation to diverse cultural and educational contexts. Beyond implementation, Yazua Afrika became a key contributor to the development of Kenya\'s National Male Engagement Strategy, positioning the organization as a national thought partner in shaping policy, practice, and long-term approaches to boys\' and young men\'s development. During this period, we also significantly strengthened our intellectual and program architecture, designing and refining proprietary curricula, leadership frameworks, mentorship methodologies, and flagship programs. This work ensured that Yazua Afrika\'s approach moved beyond isolated interventions toward a scalable, research-informed system for the holistic formation of boys and young men.' 
     },
   ];
 
@@ -84,26 +84,45 @@ export function AboutPage() {
               className="bg-gray-50 rounded-2xl p-8 md:p-12"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our work is centered on:
+                Our Work
               </h2>
-              <ul className="space-y-4 text-lg text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
-                  <span>Mentorship and youth empowerment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
-                  <span>Education and skills development</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
-                  <span>Community support and social impact initiatives</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#FF6F3C] font-bold mt-1">•</span>
-                  <span>Ethical partnerships and transparent engagement</span>
-                </li>
-              </ul>
+              <p className="text-lg text-gray-700 mb-8">
+                At Yazua Afrika, we exist to intentionally form boys and young men into grounded, ethical, and purpose-driven leaders. Our work is anchored in four interconnected pillars:
+              </p>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Mentorship & Boys Development
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    We place consistent, trusted mentorship at the centre of development, ensuring every boy is seen, guided, and challenged to grow in identity, responsibility, and leadership.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Education & Skills for Life
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    We go beyond academics to develop critical thinking, emotional intelligence, and practical life skills that prepare young people to navigate complexity with confidence and integrity.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Community & Social Impact
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    We strengthen the ecosystems around boys, their families, schools, and communities, creating networks of support, accountability, and belonging that sustain long-term growth.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Ethical Partnerships & Transparency
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    We collaborate with aligned partners through clear governance, shared values, and transparent engagement to ensure trust, integrity, and measurable impact.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div
