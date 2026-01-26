@@ -49,13 +49,19 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="flex justify-center mb-6">
-              <img 
-                src={`${import.meta.env.BASE_URL}yazua_logo.png`} 
-                alt="YAZUA AFRIKA Logo" 
-                className="h-24 w-auto bg-transparent"
-                style={{ backgroundColor: 'transparent' }}
-              />
+            <div className="flex justify-center mb-6 px-4">
+              <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl">
+                <img 
+                  src={`${import.meta.env.BASE_URL}yazua_logo2.png`} 
+                  alt="YAZUA AFRIKA Logo" 
+                  className="w-full h-auto object-contain"
+                  style={{ 
+                    backgroundColor: 'transparent',
+                    display: 'block',
+                    margin: '0 auto'
+                  }}
+                />
+              </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               About <span className="text-[#FF6F3C]">Yazua Afrika</span>
