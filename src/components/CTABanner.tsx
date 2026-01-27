@@ -55,9 +55,14 @@ export function CTABanner() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                  <button className="bg-white text-[#FF6F3C] px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold whitespace-nowrap">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-[#FF6F3C] px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold whitespace-nowrap"
+                  >
                     Apply Now <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </a>
                   <button className="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#FF6F3C] transition-all duration-300 font-semibold whitespace-nowrap">
                     Donate
                   </button>

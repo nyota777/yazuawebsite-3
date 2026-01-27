@@ -78,7 +78,7 @@ export function Footer() {
                 <BookOpen className="w-5 h-5" />
               </a>
               <a
-                href="mailto:info@yazuaafrika.com"
+                href="mailto:register@yazuaafrika.com"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF6F3C] transition-colors"
                 aria-label="Email"
               >
@@ -216,8 +216,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#FF6F3C]" />
-                <a href="mailto:info@yazuaafrika.com" className="hover:text-[#FF6F3C] transition-colors">
-                  info@yazuaafrika.com
+                <a href="mailto:register@yazuaafrika.com" className="hover:text-[#FF6F3C] transition-colors">
+                  register@yazuaafrika.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
