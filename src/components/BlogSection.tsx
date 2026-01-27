@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Calendar, User, ArrowRight, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
+import forgeLogo from '/forge_logo.png';
+
 export function BlogSection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +20,7 @@ export function BlogSection() {
         theForge: 'Engage: Growth is never a solo journey. Find a friend, a mentor, or a group and have a real conversation about this. Let\'s sharpen each other. Share: If this resonated with you, pass it along to a brother, a father, a son—someone who is walking their own journey of manhood. Create a #space to talk and share your ideas and thoughts. Reflect: Take five minutes today to journal or voice-record your thoughts: What version of masculinity am I FORGING? What do I need to let go of, and what do I need to embrace?',
         theEdge: 'This week, pay attention to the moments that shape you. Not the big, dramatic turning points—but the small, unnoticed choices. How you respond to stress. How you carry your burdens. How you hold yourself accountable. A man is not made in the grand gestures but in the unseen discipline of daily living. Every day is a chance to #FORGE yourself. The fire is waiting. Step into it. Until the next FORGED FRIDAY, Eric'
       },
-      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      image: forgeLogo,
       category: 'Leadership',
       author: 'Eric Mungai',
       date: 'Feb 21, 2025',
@@ -28,7 +30,7 @@ export function BlogSection() {
     {
       title: 'THE FIRE',
       excerpt: 'We often speak of missing boys when they\'ve run away, dropped out, or disappeared from school or society altogether. But some boys begin to disappear long before they leave. They vanish in plain sight, silent in the classroom, withdrawn at the dinner table, performing masculinity like a soldier reciting commands he does not believe in. Their minds are loud, but their voices have gone quiet. Their hearts ache, but their faces remain blank. Their names are on the roll call, but they are not seen.',
-      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      image: forgeLogo,
       category: 'Leadership',
       author: 'Eric Mungai',
       date: 'Jan 5, 2026',
@@ -38,7 +40,7 @@ export function BlogSection() {
     {
       title: 'Boys Responsibility',
       excerpt: '🔥 THE FIRE - There comes a point in every boy\'s life when the question of weight emerges, not the weight of muscle or body, but the weight of RESPONSIBILITY. Responsibility is not something boys are born with. It is not instinctive, nor does it fall neatly into place with age. It is FORGED. And like iron under heat, it requires pressure, friction, and repetition. We cannot expect boys to carry the burdens of manhood tomorrow, if we do not invite them to shoulder responsibilities, however small, today.',
-      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      image: forgeLogo,
       category: 'Youth Development',
       author: 'Eric Mungai',
       date: 'Dec 28, 2025',
@@ -48,7 +50,7 @@ export function BlogSection() {
     {
       title: 'Digital Loneliness: The Silent Erosion of Boyhood',
       excerpt: '🔥 THE FIRE - Here\'s a question worth sitting with: What if the loneliness epidemic among boys isn\'t a failure of connection, but a crisis of recognition? We\'ve built a world where a boy can accumulate thousands of followers yet remain fundamentally unknown, speak constantly yet never be truly heard. The architecture of digital life promised us community, but delivered performance. And boys, more than anyone, are paying the price. We\'ve replaced the friction of embodied presence, the messy, inefficient, gloriously human work of friendship with the frictionless ease of algorithmic relation.',
-      image: `${import.meta.env.BASE_URL}forge_logo.png`,
+      image: forgeLogo,
       category: 'Success Stories',
       author: 'Eric Mungai',
       date: 'Dec 20, 2025',
@@ -125,7 +127,7 @@ export function BlogSection() {
         </div>
 
         {/* Blog Carousel */}
-        <div className="relative max-w-7xl mx-auto px-12 md:px-16">
+        <div className="relative max-w-5xl mx-auto px-4 md:px-6">
           <div className="relative overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
@@ -142,48 +144,48 @@ export function BlogSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group w-full max-w-2xl"
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group w-full max-w-lg"
                   >
-                    <div className="relative h-56 overflow-hidden">
+                    <div className="relative h-40 md:h-44 overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <div className="absolute top-3 left-3 bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                         {post.category}
                       </div>
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                    <div className="p-5 md:p-6">
+                      <div className="flex items-center gap-4 text-xs text-gray-500 mb-2">
                         <span className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
+                          <User className="w-3.5 h-3.5" />
                           {post.author}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                          <Calendar className="w-3.5 h-3.5" />
                           {post.date}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">{post.excerpt}</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500">{post.readTime}</span>
+                        <span className="text-xs text-gray-500">{post.readTime}</span>
                         {post.link ? (
                           <a 
                             href={post.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300"
+                            className="flex items-center gap-2 text-orange-600 text-sm font-semibold hover:gap-3 transition-all duration-300"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            Read More <ArrowRight className="w-5 h-5" />
+                            Read More <ArrowRight className="w-4 h-4" />
                           </a>
                         ) : (
-                          <button className="flex items-center gap-2 text-orange-600 font-semibold hover:gap-4 transition-all duration-300">
-                            Read More <ArrowRight className="w-5 h-5" />
+                          <button className="flex items-center gap-2 text-orange-600 text-sm font-semibold hover:gap-3 transition-all duration-300">
+                            Read More <ArrowRight className="w-4 h-4" />
                           </button>
                         )}
                       </div>
@@ -199,7 +201,7 @@ export function BlogSection() {
                 <button
                   onClick={prevPosts}
                   disabled={isFirst}
-                  className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-6 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
                     isFirst
                       ? 'opacity-40 cursor-not-allowed text-gray-400'
                       : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
@@ -212,7 +214,7 @@ export function BlogSection() {
                 <button
                   onClick={nextPosts}
                   disabled={isLast}
-                  className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
+                  className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-6 bg-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out z-20 ${
                     isLast
                       ? 'opacity-40 cursor-not-allowed text-gray-400'
                       : 'hover:shadow-xl hover:bg-orange-600 hover:text-white text-orange-600 cursor-pointer'
