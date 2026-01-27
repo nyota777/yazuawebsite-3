@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  // 🔑 REQUIRED for GitHub Pages
-  base: '/yazuawebsite-3/',
+  // ✅ Netlify: Use root path (no sub-path needed)
+  base: '/',
 
   plugins: [react()],
 
@@ -58,7 +58,7 @@ export default defineConfig({
 
   build: {
     target: 'esnext',
-    outDir: 'build', // ✅ fine for GitHub Pages
+    outDir: 'build', // ✅ Works for both Netlify and GitHub Pages
   },
 
   server: {
