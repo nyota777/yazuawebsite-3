@@ -58,7 +58,7 @@ export function HeroSection() {
               Join a Program <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="#about"
+              href="#programs"
               className="bg-white text-gray-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-lg"
             >
               Learn More

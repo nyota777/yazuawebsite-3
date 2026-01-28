@@ -424,7 +424,7 @@ export function ProgramsSection() {
                         <ArrowRight className="w-5 h-5" />
                       </a>
                       <a
-                        href="https://book.heygoldie.com/Yazua-Afrika"
+                        href="https://forms.gle/ysGpcAzpi9VqisPG6"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gray-100 text-gray-900 px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"
@@ -435,7 +435,7 @@ export function ProgramsSection() {
                     </>
                   ) : (
                     <a
-                      href="https://book.heygoldie.com/Yazua-Afrika"
+                      href="https://forms.gle/ysGpcAzpi9VqisPG6"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold"

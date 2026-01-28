@@ -7,7 +7,7 @@ import { cn } from './ui/utils';
 import { FullCalendarView, Event } from './FullCalendarView';
 
 export function EventCalendar() {
-  const REGISTER_URL = 'https://book.heygoldie.com/Yazua-Afrika';
+  const REGISTER_URL = 'https://forms.gle/ysGpcAzpi9VqisPG6';
 
   const formatDate = (d: Date) =>
     new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(d);

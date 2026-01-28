@@ -55,7 +55,7 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
 
-  const REGISTER_URL = 'https://book.heygoldie.com/Yazua-Afrika';
+  const REGISTER_URL = 'https://forms.gle/ysGpcAzpi9VqisPG6';
 
   // Get all dates that have events
   const eventDates = useMemo(() => {
