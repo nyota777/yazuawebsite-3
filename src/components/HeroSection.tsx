@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Users, Award, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   const [currentStat, setCurrentStat] = useState(0);
@@ -57,12 +58,12 @@ export function HeroSection() {
             >
               Join a Program <ArrowRight className="w-5 h-5" />
             </a>
-            <a
-              href="#programs"
+            <Link
+              to="/about"
               className="bg-white text-gray-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-lg"
             >
               Learn More
-            </a>
+            </Link>
           </div>
 
           {/* Animated Statistics Panel */}
