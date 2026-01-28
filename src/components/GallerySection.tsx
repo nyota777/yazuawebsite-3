@@ -10,6 +10,12 @@ export function GallerySection() {
   const galleryItems = [
     {
       type: 'image',
+      src: `${import.meta.env.BASE_URL}impact-numbers-2025.png`,
+      title: "2025 Our Numbers (Kenya)",
+      category: 'Impact',
+    },
+    {
+      type: 'image',
       src: `${import.meta.env.BASE_URL}gallery1.jpg`,
       title: 'Leadership Training Session',
       category: 'Leadership',
