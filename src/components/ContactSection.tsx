@@ -17,7 +17,7 @@ export function ContactSection() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:register@yazuaafrika.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@yazuaafrika.com?subject=${subject}&body=${body}`;
     // Show success message
     alert('Thank you for your message! Your email client will open to send the message.');
     setFormData({ name: '', email: '', phone: '', message: '' });
@@ -171,10 +171,10 @@ export function ContactSection() {
                   <div>
                     <h3 className="text-white font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:register@yazuaafrika.com"
+                      href="mailto:hello@yazuaafrika.com"
                       className="text-gray-400 hover:text-[#FF6F3C] transition-colors block"
                     >
-                      register@yazuaafrika.com
+                      hello@yazuaafrika.com
                     </a>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export function ContactSection() {
                   <BookOpen className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
                 </a>
                 <a
-                  href="mailto:register@yazuaafrika.com"
+                  href="mailto:hello@yazuaafrika.com"
                   className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors group"
                   aria-label="Email"
                 >
