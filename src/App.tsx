@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
+import { ProgramsPage } from './pages/ProgramsPage';
+import { IDecidePage } from './pages/IDecidePage';
+import { EventsPage } from './pages/EventsPage';
+import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
   return (
@@ -9,6 +13,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/idecide" element={<IDecidePage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );

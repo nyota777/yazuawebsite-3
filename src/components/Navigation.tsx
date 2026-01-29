@@ -19,11 +19,12 @@ export function Navigation() {
   const navLinks = [
     { name: 'Home', href: '/', isRoute: true },
     { name: 'About', href: '/about', isRoute: true },
-    { name: 'Programs', href: '#programs', isRoute: false },
+    { name: 'Programs', href: '/programs', isRoute: true },
     { name: 'Gallery', href: '#gallery', isRoute: false },
     { name: 'Blog', href: '#blog', isRoute: false },
-    { name: 'iDECIDE', href: '#idecide', isRoute: false },
-    { name: 'Contact', href: '#contact', isRoute: false },
+    { name: 'iDECIDE', href: '/idecide', isRoute: true },
+    { name: 'Upcoming Events', href: '/events', isRoute: true },
+    { name: 'Contact', href: '/contact', isRoute: true },
   ];
 
   return (
