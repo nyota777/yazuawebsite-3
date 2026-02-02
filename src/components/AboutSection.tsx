@@ -49,15 +49,9 @@ export function AboutSection() {
           <div className="flex justify-center mb-6 px-8 py-4">
             <div className="relative inline-block max-w-md md:max-w-lg lg:max-w-2xl">
               <img 
-                src={`${import.meta.env.BASE_URL}yazua_logo2.png`} 
+                src={`${import.meta.env.BASE_URL}logo4.png`} 
                 alt="YAZUA AFRIKA Logo" 
-                className="w-full h-auto object-contain"
-                style={{ 
-                  backgroundColor: 'transparent',
-                  display: 'block',
-                  maxWidth: '100%',
-                  height: 'auto'
-                }}
+                className="logo-img w-full h-auto max-w-full"
               />
             </div>
           </div>

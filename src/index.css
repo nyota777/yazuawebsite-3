@@ -2528,3 +2528,10 @@ html {
     transform: none;
   }
 }
+
+/* Logo / favicon: no white box; use transparent-background assets for best result */
+img.logo-img {
+  display: block;
+  background: transparent !important;
+  object-fit: contain;
+}

@@ -37,10 +37,9 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
             <img 
-              src={`${import.meta.env.BASE_URL}yazua_logo.png`} 
+              src={`${import.meta.env.BASE_URL}logo4.png`} 
               alt="YAZUA AFRIKA Logo" 
-              className="h-12 w-auto bg-transparent"
-              style={{ backgroundColor: 'transparent' }}
+              className="logo-img h-12 w-auto"
             />
           </Link>
 
