@@ -49,9 +49,10 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              About <span className="text-[#FF6F3C]">Yazua Afrika</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              About Us
             </h1>
+            <p className="text-xl text-gray-600">About <span className="text-[#FF6F3C]">Yazua Afrika</span></p>
           </motion.div>
 
           <motion.div
