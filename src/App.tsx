@@ -7,11 +7,13 @@ import { IDecidePage } from './pages/IDecidePage';
 import { EventsPage } from './pages/EventsPage';
 import { ContactPage } from './pages/ContactPage';
 import { ScrollToTop } from './components/ScrollToTop';
+import { FaviconSync } from './components/FaviconSync';
 
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
+      <FaviconSync />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
