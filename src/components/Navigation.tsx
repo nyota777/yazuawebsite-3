@@ -29,16 +29,15 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
-            <img 
-              src={`${import.meta.env.BASE_URL}logo4.png`} 
-              alt="YAZUA AFRIKA Logo" 
+            <img
+              src={`${import.meta.env.BASE_URL}logo4.png`}
+              alt="YAZUA AFRIKA Logo"
               className="logo-img h-12 w-auto"
             />
           </Link>
@@ -51,9 +50,8 @@ export function Navigation() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
-                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
-                    }`}
+                    className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -83,9 +81,9 @@ export function Navigation() {
                 );
               }
             })}
-            <button className="bg-[#FF6F3C] text-white px-6 py-2 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
+            <Link to="/donate" className="bg-[#FF6F3C] text-white px-6 py-2 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
               Donate
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,9 +110,8 @@ export function Navigation() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${
-                      location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
-                    }`}
+                    className={`block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
+                      }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -146,9 +143,9 @@ export function Navigation() {
                 );
               }
             })}
-            <button className="w-full bg-[#FF6F3C] text-white px-6 py-3 rounded-full hover:bg-[#e55a2a] transition-colors duration-200">
+            <Link to="/donate" className="block text-center w-full bg-[#FF6F3C] text-white px-6 py-3 rounded-full hover:bg-[#e55a2a] transition-colors duration-200" onClick={() => setIsMobileMenuOpen(false)}>
               Donate
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -6,6 +6,7 @@ import { ProgramsPage } from './pages/ProgramsPage';
 import { IDecidePage } from './pages/IDecidePage';
 import { EventsPage } from './pages/EventsPage';
 import { ContactPage } from './pages/ContactPage';
+import { DonatePage } from './pages/DonatePage';
 import { ScrollToTop } from './components/ScrollToTop';
 import { FaviconSync } from './components/FaviconSync';
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/idecide" element={<IDecidePage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/donate" element={<DonatePage />} />
       </Routes>
     </BrowserRouter>
   );
