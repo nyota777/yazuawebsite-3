@@ -115,15 +115,15 @@ export function DonateSection() {
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
                     Full Name
                   </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User className="h-5 w-5 text-gray-400" />
+                  <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden focus-within:ring-1 focus-within:ring-[#FF6F3C] focus-within:border-[#FF6F3C] transition-colors">
+                    <div className="pl-3 pr-2 text-gray-400">
+                      <User className="h-5 w-5" />
                     </div>
                     <input
                       type="text"
                       id="fullName"
                       required
-                      className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full border-none p-0 py-2 focus:ring-0 text-gray-900 placeholder-gray-400"
                       placeholder="John Doe"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
@@ -135,15 +135,15 @@ export function DonateSection() {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address
                   </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Mail className="h-5 w-5 text-gray-400" />
+                  <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden focus-within:ring-1 focus-within:ring-[#FF6F3C] focus-within:border-[#FF6F3C] transition-colors">
+                    <div className="pl-3 pr-2 text-gray-400">
+                      <Mail className="h-5 w-5" />
                     </div>
                     <input
                       type="email"
                       id="email"
                       required
-                      className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full border-none p-0 py-2 focus:ring-0 text-gray-900 placeholder-gray-400"
                       placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -180,8 +180,8 @@ export function DonateSection() {
                   <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-1">
                     Donation Amount (KES)
                   </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden focus-within:ring-1 focus-within:ring-[#FF6F3C] focus-within:border-[#FF6F3C] transition-colors">
+                    <div className="pl-3 pr-2 flex items-center pointer-events-none">
                       <span className="text-gray-500 font-medium">KES</span>
                     </div>
                     <input
@@ -189,7 +189,7 @@ export function DonateSection() {
                       id="amount"
                       required
                       min="1"
-                      className="block w-full pl-16 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full border-none p-0 py-2 focus:ring-0 text-gray-900 placeholder-gray-400"
                       placeholder="1000"
                       value={formData.amount}
                       onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
