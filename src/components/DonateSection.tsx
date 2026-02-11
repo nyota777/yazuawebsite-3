@@ -32,7 +32,7 @@ export function DonateSection() {
             Support the Work of Yazua Afrika
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Your contribution directly supports our programs empowering boys, families, and communities across Africa. 
+            Your contribution directly supports our programs empowering boys, families, and communities across Africa.
             Together, we can create lasting change and build stronger foundations for future generations.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function DonateSection() {
               </div>
               <p className="text-orange-100 text-sm">Use the details below to complete your donation</p>
             </div>
-            
+
             <div className="p-8 space-y-8">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 bg-orange-50 rounded-xl border border-orange-100">
                 <div>
@@ -71,7 +71,7 @@ export function DonateSection() {
                     <p className="text-gray-600">YAZUA AFRIKA</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-2 bg-green-50 rounded-lg text-green-600 mt-1">
                     <CheckCircle2 className="w-5 h-5" />
@@ -101,7 +101,7 @@ export function DonateSection() {
                 <p className="text-gray-600">
                   We appreciate your support. Please complete your donation via M-Pesa using the Paybill details provided.
                 </p>
-                <button 
+                <button
                   onClick={() => setSubmitted(false)}
                   className="mt-6 text-[#FF6F3C] font-semibold hover:text-[#e55a2a]"
                 >
@@ -122,10 +122,10 @@ export function DonateSection() {
                       type="text"
                       id="fullName"
                       required
-                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
                       placeholder="John Doe"
                       value={formData.fullName}
-                      onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     />
                   </div>
                 </div>
@@ -142,10 +142,10 @@ export function DonateSection() {
                       type="email"
                       id="email"
                       required
-                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
                       placeholder="john@example.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export function DonateSection() {
                       required
                       className="block w-full pl-3 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors appearance-none bg-white"
                       value={formData.program}
-                      onChange={(e) => setFormData({...formData, program: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                     >
                       <option value="">Select a program</option>
                       {programs.map((prog) => (
@@ -188,10 +188,10 @@ export function DonateSection() {
                       id="amount"
                       required
                       min="1"
-                      className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
+                      className="block w-full pl-16 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-[#FF6F3C] focus:border-[#FF6F3C] transition-colors"
                       placeholder="1000"
                       value={formData.amount}
-                      onChange={(e) => setFormData({...formData, amount: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
                     />
                   </div>
                 </div>
