@@ -17,11 +17,12 @@ export function DonateSection() {
   };
 
   const programs = [
-    "General Support",
-    "Boy Child Empowerment",
-    "Family Counseling",
-    "Community Outreach",
-    "Educational Support"
+    "MAN UP LEADERSHIP ADVENTURES",
+    "FORGE",
+    "IDECIDE",
+    "BUILD",
+    "MENTORSHIP CIRCLE",
+    "X GLOBAL SUMMER EXPERIENCES"
   ];
 
   return (
