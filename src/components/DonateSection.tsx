@@ -53,12 +53,12 @@ export function DonateSection() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 bg-orange-50 rounded-xl border border-orange-100">
                 <div>
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Paybill Number</p>
-                  <p className="text-3xl font-bold text-gray-900">380430</p>
+                  <p className="text-3xl font-bold text-gray-900">552800</p>
                 </div>
                 <div className="h-px md:h-12 w-full md:w-px bg-orange-200"></div>
                 <div>
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Account Number</p>
-                  <p className="text-lg font-medium text-gray-900">Program/Activity Name</p>
+                  <p className="text-lg font-medium text-gray-900">380430</p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export function DonateSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Important Note</h4>
-                    <p className="text-gray-600">Please ensure you enter the correct program or activity name as the account number when making your donation.</p>
+                    <p className="text-gray-600">Please ensure you enter the correct Paybill and Account Number when making your donation.</p>
                   </div>
                 </div>
               </div>
