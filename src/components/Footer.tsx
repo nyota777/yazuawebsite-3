@@ -29,9 +29,9 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img 
-                src={`${import.meta.env.BASE_URL}logo4.png`} 
-                alt="YAZUA AFRIKA Logo" 
+              <img
+                src={`${import.meta.env.BASE_URL}logo4.png`}
+                alt="YAZUA AFRIKA Logo"
                 className="logo-img h-14 w-auto"
               />
             </div>
@@ -101,12 +101,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleHashLink('#programs')}
-                  className="hover:text-[#FF6F3C] transition-colors text-left"
-                >
+                <Link to="/programs" className="hover:text-[#FF6F3C] transition-colors text-left">
                   Programs
-                </button>
+                </Link>
               </li>
               <li>
                 <button
@@ -125,12 +122,9 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => handleHashLink('#contact')}
-                  className="hover:text-[#FF6F3C] transition-colors text-left"
-                >
+                <Link to="/contact" className="hover:text-[#FF6F3C] transition-colors text-left">
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

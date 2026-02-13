@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -63,9 +64,9 @@ export function CTABanner() {
                   >
                     Apply Now <ArrowRight className="w-5 h-5" />
                   </a>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#FF6F3C] transition-all duration-300 font-semibold whitespace-nowrap">
+                  <Link to="/donate" className="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#FF6F3C] transition-all duration-300 font-semibold whitespace-nowrap">
                     Donate
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
