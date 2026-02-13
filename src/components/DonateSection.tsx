@@ -55,10 +55,9 @@ export function DonateSection() {
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Paybill Number</p>
                   <p className="text-3xl font-bold text-gray-900">552800</p>
                 </div>
-                <div className="h-px md:h-12 w-full md:w-px bg-orange-200"></div>
                 <div>
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Account Number</p>
-                  <p className="text-lg font-medium text-gray-900">380430</p>
+                  <p className="text-3xl font-bold text-gray-900">380430</p>
                 </div>
               </div>
 
