@@ -12,7 +12,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { FaviconSync } from './components/FaviconSync';
 
 // TOGGLE THIS TO ENABLE/DISABLE MAINTENANCE MODE
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 export default function App() {
   // Remove this override to restore normal website functionality.
