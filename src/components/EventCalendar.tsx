@@ -64,40 +64,22 @@ export function EventCalendar() {
   const initialEvents: EventItem[] = useMemo(() => {
     const now = new Date();
 
-    const manupNext = getNextThirdSaturday(now);
+    const forgeJulyStart = new Date('2026-07-13T00:00:00');
+    const forgeJulyEnd = new Date('2026-07-26T00:00:00');
+    
+    const forgeAugustStart = new Date('2026-08-04T00:00:00');
+    const forgeAugustEnd = new Date('2026-08-16T00:00:00');
 
-    const forgeStart = new Date('2026-07-13T00:00:00');
-    const forgeEnd = new Date('2026-07-26T00:00:00');
+    const workshopStart = new Date('2026-06-19T00:00:00');
+    const workshopEnd = new Date('2026-06-21T00:00:00');
 
-    const workshopStart = new Date('2026-03-19T00:00:00');
-    const workshopEnd = new Date('2026-03-21T00:00:00');
-
-    const firepit = new Date('2026-03-20T00:00:00');
-    const parentInfo = new Date('2026-04-25T00:00:00');
-    const showcase = new Date('2026-05-10T00:00:00');
+    const firepit = new Date('2026-05-15T00:00:00'); // Ongoing, using a placeholder date so it shows up or is sorted
+    const parentInfo = new Date('2026-06-25T00:00:00');
+    
+    const showcaseKamiti = new Date('2026-05-16T10:00:00');
+    const showcaseRuiru = new Date('2026-05-16T13:00:00');
 
     return [
-      {
-        id: 'idecide-life-coaching',
-        title: 'iDECIDE Life Coaching Session',
-        category: 'Coaching',
-        color: 'bg-[#8B7355]',
-        dateLabel: 'Open Calendar',
-        sortDate: now,
-        time: '10:00 AM - 1:00 PM (personalised)',
-        location: 'Online & In-Person',
-        showJoinNow: true,
-      },
-      {
-        id: 'manup-monthly',
-        title: 'ManUp Leadership Adventure - Monthly',
-        category: 'Outdoor Adventure',
-        color: 'bg-[#006B3F]',
-        dateLabel: `Every Third Saturday (Next: ${formatDate(manupNext)})`,
-        sortDate: manupNext,
-        time: 'Registration Ongoing - Every Third Saturday of the month',
-        location: 'Location TBC',
-      },
       {
         id: 'forge-facilitators-workshop',
         title: 'FORGE - Facilitators and Mentors Coaching Workshop',
@@ -114,7 +96,7 @@ export function EventCalendar() {
         title: 'BUILD Coaching Sessions - Group FirePit Session',
         category: 'Coaching',
         color: 'bg-[#FF6F3C]',
-        dateLabel: formatDate(firepit),
+        dateLabel: 'Ongoing',
         sortDate: firepit,
         time: '4:00 PM - 7:00 PM',
         location: 'Location TBC',
@@ -133,13 +115,23 @@ export function EventCalendar() {
         showJoinNow: true,
       },
       {
-        id: 'community-impact-showcase',
+        id: 'community-impact-showcase-kamiti',
         title: 'Community Impact Showcase',
         category: 'Community Event',
         color: 'bg-[#006B3F]',
-        dateLabel: formatDate(showcase),
-        sortDate: showcase,
-        time: '10:00 AM - 6:00 PM',
+        dateLabel: formatDate(showcaseKamiti),
+        sortDate: showcaseKamiti,
+        time: '10:00 AM - 12:00 PM',
+        location: 'Kamiti Prison YCTC Boys Centre - Kamiti',
+      },
+      {
+        id: 'community-impact-showcase-ruiru',
+        title: 'Community Impact Showcase',
+        category: 'Community Event',
+        color: 'bg-[#006B3F]',
+        dateLabel: formatDate(showcaseRuiru),
+        sortDate: showcaseRuiru,
+        time: '1:00 PM - 6:00 PM',
         location: 'Embrace Boys Centre - Ruiru',
       },
       {
@@ -147,13 +139,26 @@ export function EventCalendar() {
         title: 'FORGE - Registration On-going (July Camp)',
         category: 'Program',
         color: 'bg-[#FF6F3C]',
-        dateLabel: formatDateRange(forgeStart, forgeEnd),
-        sortDate: forgeStart,
-        endDate: forgeEnd,
+        dateLabel: formatDateRange(forgeJulyStart, forgeJulyEnd),
+        sortDate: forgeJulyStart,
+        endDate: forgeJulyEnd,
         time: 'July Camp: 13th - 26th July',
-        location: 'Location TBC',
+        location: 'Karen & Sagana',
         slotsTotal: 12,
-        slotsRemaining: 12,
+        slotsRemaining: 7,
+      },
+      {
+        id: 'forge-august-camp',
+        title: 'FORGE - Registration On-going (July Camp)',
+        category: 'Program',
+        color: 'bg-[#FF6F3C]',
+        dateLabel: formatDateRange(forgeAugustStart, forgeAugustEnd),
+        sortDate: forgeAugustStart,
+        endDate: forgeAugustEnd,
+        time: 'July Camp: 4th - 17th August',
+        location: 'Karen & Sagana',
+        slotsTotal: 12,
+        slotsRemaining: 8,
       },
     ]
       .slice()
@@ -395,37 +400,45 @@ export function EventCalendar() {
         open={fullCalendarOpen}
         onOpenChange={setFullCalendarOpen}
         events={useMemo(() => {
-          const now = new Date();
-          const manupNext = getNextThirdSaturday(now);
-          const forgeStart = new Date('2026-07-13T00:00:00');
-          const forgeEnd = new Date('2026-07-26T00:00:00');
-          const workshopStart = new Date('2026-03-19T00:00:00');
-          const workshopEnd = new Date('2026-03-21T00:00:00');
-          const firepit = new Date('2026-03-20T00:00:00');
-          const parentInfo = new Date('2026-04-25T00:00:00');
-          const showcase = new Date('2026-05-10T00:00:00');
+          const forgeJulyStart = new Date('2026-07-13T00:00:00');
+          const forgeJulyEnd = new Date('2026-07-26T00:00:00');
+          
+          const forgeAugustStart = new Date('2026-08-04T00:00:00');
+          const forgeAugustEnd = new Date('2026-08-16T00:00:00');
+
+          const workshopStart = new Date('2026-06-19T00:00:00');
+          const workshopEnd = new Date('2026-06-21T00:00:00');
+
+          const firepit = new Date('2026-05-15T00:00:00');
+          const parentInfo = new Date('2026-06-25T00:00:00');
+          
+          const showcaseKamiti = new Date('2026-05-16T10:00:00');
+          const showcaseRuiru = new Date('2026-05-16T13:00:00');
 
           return [
             {
               id: 'forge-july-camp',
               title: 'FORGE July Camp',
               category: 'Camp' as const,
-              startDate: forgeStart,
-              endDate: forgeEnd,
+              startDate: forgeJulyStart,
+              endDate: forgeJulyEnd,
               time: 'July Camp: 13th - 26th July',
-              location: 'Location TBC',
+              location: 'Karen & Sagana',
               recurrence: null,
               slotsTotal: 12,
-              slotsRemaining: 12,
+              slotsRemaining: 7,
             },
             {
-              id: 'manup-monthly',
-              title: 'ManUp Leadership Adventure',
-              category: 'Workshop' as const,
-              startDate: manupNext,
-              time: 'Registration Ongoing - Every Third Saturday of the month',
-              location: 'Location TBC',
-              recurrence: 'monthly' as const,
+              id: 'forge-august-camp',
+              title: 'FORGE August Camp',
+              category: 'Camp' as const,
+              startDate: forgeAugustStart,
+              endDate: forgeAugustEnd,
+              time: 'July Camp: 4th - 17th August',
+              location: 'Karen & Sagana',
+              recurrence: null,
+              slotsTotal: 12,
+              slotsRemaining: 8,
             },
             {
               id: 'build-firepit-session',
@@ -439,16 +452,6 @@ export function EventCalendar() {
               slotsRemaining: 8,
             },
             {
-              id: 'idecide-life-coaching',
-              title: 'iDECIDE Life Coaching Session',
-              category: 'Coaching' as const,
-              startDate: now,
-              time: '10:00 AM - 1:00 PM (personalised)',
-              location: 'Online & In-Person',
-              recurrence: null,
-              showJoinNow: true,
-            },
-            {
               id: 'parent-info-session',
               title: 'Parent Information Session',
               category: 'Info Session' as const,
@@ -459,11 +462,20 @@ export function EventCalendar() {
               showJoinNow: true,
             },
             {
-              id: 'community-impact-showcase',
-              title: 'Community Impact Showcase',
+              id: 'community-impact-showcase-kamiti',
+              title: 'Community Impact Showcase - Kamiti',
               category: 'Workshop' as const,
-              startDate: showcase,
-              time: '10:00 AM - 6:00 PM',
+              startDate: showcaseKamiti,
+              time: '10:00 AM - 12:00 PM',
+              location: 'Kamiti Prison YCTC Boys Centre - Kamiti',
+              recurrence: null,
+            },
+            {
+              id: 'community-impact-showcase-ruiru',
+              title: 'Community Impact Showcase - Ruiru',
+              category: 'Workshop' as const,
+              startDate: showcaseRuiru,
+              time: '1:00 PM - 6:00 PM',
               location: 'Embrace Boys Centre - Ruiru',
               recurrence: null,
             },

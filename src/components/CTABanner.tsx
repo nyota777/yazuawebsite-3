@@ -57,7 +57,7 @@ export function CTABanner() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
+                    href="https://forms.gle/ysGpcAzpi9VqisPG6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white text-[#FF6F3C] px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 font-semibold whitespace-nowrap"

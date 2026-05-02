@@ -58,22 +58,32 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About <span className="text-[#FF6F3C]">YAZUA AFRIKA</span>
           </h2>
-          <div className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed space-y-4 text-left">
+          <div className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed space-y-6 text-left">
             <p>
-              Yazua Afrika exists because boyhood is not a waiting room, it is a formative terrain. What happens here determines the kind of men our societies inherit.
+              At Yazua Afrika, we exist to intentionally form boys and young men into grounded, ethical, and purpose-driven leaders. Our work is anchored in four interconnected pillars:
             </p>
-            <p>
-              We are a boys' development organisation dedicated to the intentional formation of young men for leadership, responsibility, and meaningful contribution. Drawing on experiential development models, we work at the intersection of mentorship, project-based learning, and outdoor challenge. Boys do not grow by instruction alone, but by experience that demands courage, reflection, and choice.
-            </p>
-            <p>
-              Development is not accidental, it is FORGED. Through rites of passage, sustained mentorship sessions, and carefully designed experiences, we guide boys as they learn to test themselves, understand their strengths, confront failure, and build character under pressure. In a world increasingly loud with shallow definitions of masculinity, we offer something quieter, deeper, and more enduring: competence, integrity, empathy, and purpose.
-            </p>
-            <p>
-              Our vision is generational. We imagine communities shaped by men who are grounded rather than entitled, capable rather than performative, and accountable to something larger than themselves. Men who can lead, collaborate, care, and create value at home, at work, and in society.
-            </p>
-            <p className="font-semibold">
-              Yazua Afrika is not about fixing broken boys. It is about taking boyhood seriously, and giving it the structure, challenge, and guidance it has always required.
-            </p>
+            
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-gray-900">Mentorship & Boys Development</h3>
+                <p>We place consistent, trusted mentorship at the centre of development, ensuring every boy is seen, guided, and challenged to grow in identity, responsibility, and leadership.</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bold text-gray-900">Education & Skills for Life</h3>
+                <p>We go beyond academics to develop critical thinking, emotional intelligence, and practical life skills that prepare young people to navigate complexity with confidence and integrity.</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bold text-gray-900">Community & Social Impact</h3>
+                <p>We strengthen the ecosystems around boys, their families, schools, and communities, creating networks of support, accountability, and belonging that sustain long-term growth.</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bold text-gray-900">Ethical Partnerships & Transparency</h3>
+                <p>We collaborate with aligned partners through clear governance, shared values, and transparent engagement to ensure trust, integrity, and measurable impact.</p>
+              </div>
+            </div>
           </div>
         </motion.div>
 

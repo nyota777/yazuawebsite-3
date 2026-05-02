@@ -34,7 +34,11 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center" onClick={() => {
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}>
             <img
               src={`${import.meta.env.BASE_URL}logo4.png`}
               alt="YAZUA AFRIKA Logo"
@@ -50,6 +54,11 @@ export function Navigation() {
                   <Link
                     key={link.name}
                     to={link.href}
+                    onClick={() => {
+                      if (location.pathname === link.href) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }}
                     className={`text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
                       }`}
                   >
@@ -112,7 +121,12 @@ export function Navigation() {
                     to={link.href}
                     className={`block py-2 text-gray-700 hover:text-[#FF6F3C] transition-colors duration-200 ${location.pathname === link.href ? 'text-[#FF6F3C] font-semibold' : ''
                       }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      if (location.pathname === link.href) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }}
                   >
                     {link.name}
                   </Link>

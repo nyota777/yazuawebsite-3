@@ -196,9 +196,14 @@ export function IDecideSection() {
                 <p className="text-lg text-gray-700">{getRecommendation().description}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105">
+                <a 
+                  href="https://forms.gle/ysGpcAzpi9VqisPG6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 inline-block"
+                >
                   Apply to This Program
-                </button>
+                </a>
                 <button
                   onClick={resetQuiz}
                   className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300"
