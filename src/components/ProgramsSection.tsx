@@ -59,14 +59,14 @@ export function ProgramsSection() {
       description: 'A 4-month intensive life coaching model combining online and outdoor activities, emphasising decision-making skills, mission-setting, and personal development.',
       icon: BookOpen,
       image: `${import.meta.env.BASE_URL}iDECIDE-logo.jpeg`,
-      duration: '6 months',
-      ageGroup: '13-17 years',
+      duration: '4 months',
+      ageGroup: '13-15 years',
       detailedInfo: {
         focus: 'A 4-month intensive life coaching model consisting of twelve interactive sessions.',
         methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress.',
         purpose: 'It empowers young men to define their life mission, set goals, and develop the capacity to make decisions that positively impact their community.',
         keyFeatures: [
-          'Eight interactive coaching sessions',
+          'Twelve interactive coaching sessions',
           'iDECIDE Journal for self-reflection',
           '20/20 Vision year planner',
           'Online and outdoor activities',

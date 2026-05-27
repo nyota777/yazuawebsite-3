@@ -51,7 +51,7 @@ export function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScgQFCd6OGjLMY_todC0RzURWWbU4vlCkuFQGOmSktdW2uzmA/viewform"
+              href="https://forms.gle/ysGpcAzpi9VqisPG6"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FF6F3C] text-white px-8 py-4 rounded-full hover:bg-[#e55a2a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg"
@@ -59,7 +59,7 @@ export function HeroSection() {
               Join a Program <ArrowRight className="w-5 h-5" />
             </a>
             <Link
-              to="/about"
+              to="/programs"
               className="bg-white text-gray-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-lg"
             >
               Learn More

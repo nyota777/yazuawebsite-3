@@ -5,6 +5,10 @@ import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
 
 export function AboutPage() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const milestones = [
     { 
       year: '2011', 

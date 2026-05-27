@@ -10,7 +10,15 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Scroll instantly
     window.scrollTo(0, 0);
+    
+    // Scroll after a short delay to account for React rendering and Framer Motion layouts
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;
