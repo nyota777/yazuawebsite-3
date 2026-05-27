@@ -67,10 +67,10 @@ export function AboutPage() {
           >
             <div className="text-lg text-gray-700 leading-relaxed space-y-6 mb-12">
               <p>
-                Yazua Afrika is a community-focused organization dedicated to nurturing potential and driving positive social impact across Africa.
+                Yazua Afrika is a premier boys' mentorship and development organization dedicated to nurturing potential, building character, and driving positive social impact across Africa.
               </p>
               <p>
-                Through structured mentorship programs, community initiatives, and transparent donation platforms, Yazua Afrika empowers individuals to build skills, access guidance, and contribute meaningfully to sustainable development.
+                Through structured mentorship programs, leadership initiatives, and experiential learning, Yazua Afrika empowers young men and boys to build critical life skills, access trusted guidance, and grow into grounded, purpose-driven leaders who contribute meaningfully to sustainable community development.
               </p>
             </div>
 

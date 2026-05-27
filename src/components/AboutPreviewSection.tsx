@@ -19,7 +19,7 @@ export function AboutPreviewSection() {
           </h2>
           <div className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
             <p>
-              Yazua Afrika is a purpose-driven organization committed to empowering communities through mentorship, education, and impact-driven programs. We connect individuals with opportunities to learn, grow, and give back by creating sustainable pathways for personal and community development.
+              Yazua Afrika is a purpose-driven boys' mentorship and development organization committed to nurturing potential, building character, and driving positive social impact across Africa. Through structured mentorship, life skills education, and leadership development, we empower boys and young men to grow into grounded, ethical, and purpose-driven leaders.
             </p>
           </div>
           <Link
