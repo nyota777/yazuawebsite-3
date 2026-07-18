@@ -17,6 +17,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}forge_logo.png`,
       duration: '6 months',
       ageGroup: '12-14 years',
+      price: 'KSh 128,500',
       detailedInfo: {
         focus: 'A 6-month Rites program centred on identity and positive masculinity.',
         methodology: 'It utilizes physically challenging activities, such as obstacle courses and rock climbing, to build "grit".',
@@ -39,6 +40,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}build-image.jpg`,
       duration: '3 months',
       ageGroup: '18-24 years',
+      price: 'KSh 44,000',
       detailedInfo: {
         focus: 'A 3-month semi-incubation program for older youth.',
         methodology: 'It emphasizes project-based learning where students submit ideas and prototypes for refinement with the help of experienced tutors and engineers.',
@@ -61,6 +63,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}iDECIDE-logo.jpeg`,
       duration: '4 months',
       ageGroup: '13-15 years',
+      price: 'KSh 28,500',
       detailedInfo: {
         focus: 'A 4-month intensive life coaching model consisting of twelve interactive sessions.',
         methodology: 'This program combines online and outdoor activities, using tools like the iDECIDE Journal and the 20/20 Vision year planner to track progress.',
@@ -76,13 +79,14 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'ManUp Leadership Adventures (Ages 9-13)', 
+      name: 'ManUp Leadership Adventures (Ages 9-13)',
       category: 'Outdoor Adventure',
       description: 'Short, high-impact 3-5 day excursions involving hiking, camping, and outdoor challenges to inspire responsible leadership and build character.',
       icon: Mountain,
       image: `${import.meta.env.BASE_URL}Man_Up_Adventures.jpeg`,
       duration: '3-5 days',
       ageGroup: '9-13 years',
+      price: 'Varies by activity',
       detailedInfo: {
         focus: 'Short, high-impact excursions lasting 3–5 days.',
         methodology: 'Participants engage in hiking, camping, and outdoor obstacle courses.',
@@ -98,13 +102,14 @@ export function ProgramsSection() {
       }
     },
     {
-      name: 'Mentorship Circle',
+      name: 'Mentorship Circle (1-on-1 Coaching)',
       category: 'Leadership',
       description: 'Ongoing mentorship program connecting young men with experienced leaders for one-on-one guidance, support, and personal development.',
       icon: Users,
       image: `${import.meta.env.BASE_URL}mentorship-circle.jpg`,
       duration: 'Ongoing',
       ageGroup: 'All ages',
+      price: 'KSh 5,000',
       detailedInfo: {
         focus: 'An ongoing initiative that connects young men with experienced leaders for one-on-one guidance.',
         methodology: 'Structured mentorship meetings with regular check-ins and goal tracking.',
@@ -127,6 +132,7 @@ export function ProgramsSection() {
       image: `${import.meta.env.BASE_URL}XGlobal_Summer_Camps.jpeg`,
       duration: '4 months',
       ageGroup: 'All ages',
+      price: 'Varies',
       detailedInfo: {
         focus: 'A 4-month program featuring hands-on design thinking workshops.',
         methodology: 'Participants collaborate on projects to develop innovative solutions for real-world problems.',
@@ -270,13 +276,20 @@ export function ProgramsSection() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  {React.createElement(program.icon, {
-                    className: 'w-8 h-8 text-orange-600',
-                  })}
-                  <span className="text-sm text-orange-600 font-semibold uppercase tracking-wide">
-                    {program.category}
-                  </span>
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <div className="flex items-center gap-3">
+                    {React.createElement(program.icon, {
+                      className: 'w-8 h-8 text-orange-600',
+                    })}
+                    <span className="text-sm text-orange-600 font-semibold uppercase tracking-wide">
+                      {program.category}
+                    </span>
+                  </div>
+                  {program.price && (
+                    <span className="text-sm font-bold text-gray-950 bg-gray-100 px-3 py-1 rounded-lg">
+                      {program.price}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {program.name}
@@ -339,6 +352,7 @@ export function ProgramsSection() {
                   <div className="flex gap-4 text-white/90 text-sm">
                     <span>⏱️ {selectedProgram.duration}</span>
                     <span>👥 {selectedProgram.ageGroup}</span>
+                    {selectedProgram.price && <span>💰 {selectedProgram.price}</span>}
                   </div>
                 </div>
               </div>
