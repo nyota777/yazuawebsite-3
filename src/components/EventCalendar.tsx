@@ -261,7 +261,7 @@ export function EventCalendar() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href={REGISTER_URL}
+                    href={event.id.includes('forge-') && !event.id.includes('workshop') ? 'https://forms.gle/KBUKxbZijTuQVhhF8' : REGISTER_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => {

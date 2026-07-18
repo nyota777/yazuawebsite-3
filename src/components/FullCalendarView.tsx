@@ -309,7 +309,11 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
                     {selectedDateEvents.length > 0 ? (
                       <div className="space-y-4">
                         {selectedDateEvents.map((event) => (
-                          <EventDetailCard key={event.id} event={event} registerUrl={REGISTER_URL} />
+                          <EventDetailCard 
+                            key={event.id} 
+                            event={event} 
+                            registerUrl={event.id.includes('forge-') && !event.id.includes('workshop') ? 'https://forms.gle/KBUKxbZijTuQVhhF8' : REGISTER_URL} 
+                          />
                         ))}
                       </div>
                     ) : (
@@ -329,7 +333,11 @@ export function FullCalendarView({ open, onOpenChange, events }: FullCalendarVie
             <div className="flex-1 p-6 overflow-y-auto">
               <div className="space-y-4">
                 {sortedEvents.map((event) => (
-                  <EventDetailCard key={event.id} event={event} registerUrl={REGISTER_URL} />
+                  <EventDetailCard 
+                    key={event.id} 
+                    event={event} 
+                    registerUrl={event.id.includes('forge-') && !event.id.includes('workshop') ? 'https://forms.gle/KBUKxbZijTuQVhhF8' : REGISTER_URL} 
+                  />
                 ))}
               </div>
             </div>
